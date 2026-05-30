@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="fundoSaque" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+   <children>
+      <AnchorPane fx:id="cardSaque" layoutX="357.0" layoutY="40.0" prefHeight="620.0" prefWidth="524.0" styleClass="card" stylesheets="@../../../css/style.css">
+         <children>
+            <Label fx:id="tituloSaque" layoutX="200.0" layoutY="14.0" text="Saque" textFill="WHITE">
+               <font>
+                  <Font name="Webdings" size="48.0" />
+               </font>
+            </Label>
+            <Accordion layoutX="74.0" layoutY="185.0" />
+            <AnchorPane id="saldoDisponivel" layoutX="74.0" layoutY="92.0" prefHeight="114.0" prefWidth="394.0" styleClass="saldo-ver">
+               <children>
+                  <Label fx:id="valorDisponivel" layoutX="19.0" layoutY="14.0" text="Saldo Disponível:">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="valorDisponivel" layoutX="19.0" layoutY="65.0" text="R$ 5.530,88">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="347.0" layoutY="14.0" text="X">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TextField fx:id="valorSaque" layoutX="74.0" layoutY="310.0" prefHeight="55.0" prefWidth="380.0" />
+            <Label fx:id="labelValorSaque" layoutX="74.0" layoutY="265.0" text="Valor do Saque:" textFill="#fff6f6">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnConfirmarSaque" layoutX="194.0" layoutY="476.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="136.0" text="Confirmar Saque" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

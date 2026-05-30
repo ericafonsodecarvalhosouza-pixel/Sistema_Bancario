@@ -1,0 +1,62 @@
+.root{
+    -fx-background-color: #090909 ;
+}
+
+.card{
+    -fx-background-color: #3f1117;
+    -fx-background-radius: 20px 20px 20px 20px;
+}
+
+.saldo-ver{
+    -fx-background-color: #acacac;
+     -fx-background-radius: 20px 20px 20px 20px;
+}
+
+.button-entrar-cad{
+    -fx-background-color: #acacac;
+}
+
+.button-confirmarsaque-cad{
+    -fx-background-color: #acacac;
+}
+
+.button-extrato-card{
+    -fx-background-color: #acacac;
+}
+
+.card-extrato{
+    -fx-background-color: #3f1117;
+    -fx-background-radius: 20px 20px 20px 20px;
+}
+
+.card-extrato-acoes{
+    -fx-background-color: #7C7C7C;
+    -fx-background-radius: 20px 20px 20px 20px;
+}
+
+.texto-pixrecebido{
+    -fx-background-color: #4CAF50;
+}
+
+.texto-transferencia{
+    -fx-background-color: #F44336;
+}
+
+.icones-extrato{
+    -fx-background-color: #1A1A1A;
+     -fx-background-radius: 20px 20px 20px 20px;
+}
+
+.extrato-ver{
+    -fx-background-color: #acacac;
+     -fx-background-radius: 20px 20px 20px 20px;
+}
+
+.sidebar{
+    -fx-background-color: #3f1117;
+
+}
+
+.houver-sidebar-extrato{
+    -fx-background-color:#591720;
+}
