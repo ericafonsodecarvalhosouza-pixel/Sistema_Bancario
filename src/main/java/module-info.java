@@ -7,4 +7,6 @@ module com.example.sistema_bancario {
     exports com.example.sistema_bancario;
     exports com.example.sistema_bancario.controller;
     opens com.example.sistema_bancario.controller to javafx.fxml;
+    exports com.example.sistema_bancario.Main;
+    opens com.example.sistema_bancario.Main to javafx.fxml;
 }
