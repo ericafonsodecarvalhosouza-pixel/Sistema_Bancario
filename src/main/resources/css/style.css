@@ -1,0 +1,98 @@
+.root{
+    -fx-background-color: 090909;
+}
+
+.card{
+    -fx-background-color: #3f1117;
+    -fx-background-radius: 20px 20px 20px 20px;
+}
+
+.button-entrar-log{
+    -fx-background-color: #acacac;
+}
+
+.tela-inicio{
+    -fx-background-color: #000000;
+}
+
+.boderpane{
+    -fx-background-color: #000000;
+}
+
+.box-left{
+    -fx-background-color: #2a0008;
+}
+
+.button-inicio{
+  -fx-background-color: #5a0815;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+}
+
+.button-saque{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}
+
+.button-deposito{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}
+
+.button-transferencia{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}
+
+.button-extrato{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}
+
+.box-center{
+    -fx-background-color: #000000;
+}
+
+.txt-ola{
+    -fx-text-fill: white;
+    -fx-font-size: 40;
+    -fx-font-weight: bold;
+}
+
+.txt-bem-vindo{
+    -fx-text-fill: #c0c0c0;
+    -fx-font-size: 18;
+}
+
+.card-saldo{
+    -fx-background-color: linear-gradient(to right,#4b0010,#5e0616);
+    -fx-background-radius: 20;
+    -fx-boder-radius: 20;
+}
+
+.saldo-disponive{
+    -fx-font-size: 14;
+    -fx-text-fill: white;
+}
+
+.quantia-saldo{
+    -fx-font-size: 32;
+    -fx-text-fill: white;
+}
+
+.vbox-conta-corrente{
+    -fx-background-color: rgba(255,255,255,0.15);
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}
+
+.vbox-agencia{
+    -fx-background-color: rgba(255,255,255,0.15);
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}
+
