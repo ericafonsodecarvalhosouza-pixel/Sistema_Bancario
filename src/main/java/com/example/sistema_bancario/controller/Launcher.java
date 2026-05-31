@@ -1,6 +1,5 @@
-package com.example.sistema_bancario.Main;
+package com.example.sistema_bancario.controller;
 
-import com.example.sistema_bancario.controller.HelloApplication;
 import javafx.application.Application;
 
 public class Launcher {
