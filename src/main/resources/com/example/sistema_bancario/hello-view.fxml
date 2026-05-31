@@ -12,9 +12,9 @@
    <children>
       <AnchorPane layoutX="377.0" layoutY="40.0" prefHeight="620.0" prefWidth="527.0" styleClass="card" stylesheets="@../../../css/style.css">
          <children>
-            <Label layoutX="218.0" layoutY="30.0" text="Login" textFill="WHITE">
+            <Label layoutX="203.0" layoutY="30.0" text="Login" textFill="WHITE">
                <font>
-                  <Font name="Webdings" size="46.0" />
+                  <Font name="System Bold" size="46.0" />
                </font>
             </Label>
             <TextField fx:id="emailField" layoutX="113.0" layoutY="225.0" prefHeight="34.0" prefWidth="314.0" />
