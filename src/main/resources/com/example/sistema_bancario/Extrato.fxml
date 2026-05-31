@@ -88,7 +88,7 @@
                   <Font size="25.0" />
                </font>
             </Label>
-            <Label fx:id="saldoAtual" layoutX="19.0" layoutY="65.0" text="R$ 5.530,88" textFill="#f2eded">
+            <Label fx:id="saldoAtualValor" layoutX="19.0" layoutY="65.0" text="R$ 5.530,88" textFill="#f2eded">
                <font>
                   <Font size="23.0" />
                </font>
@@ -161,7 +161,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label id="nomeSilviaPix" fx:id="nomeSilviaSaque" layoutX="109.0" layoutY="19.0" text="Silvia Novaes" textFill="#fff8f8" />
+            <Label id="nomeSilviaPix" fx:id="nomeSilviaPixRecebido" layoutX="109.0" layoutY="19.0" text="Silvia Novaes" textFill="#fff8f8" />
             <Label id="numeroContaNovaes" fx:id="nomeNovaesConta" layoutX="14.0" layoutY="41.0" text="Novaes/07" textFill="#fff6f6" />
             <Label fx:id="valorRecebidoNovaes" layoutX="278.0" layoutY="19.0" styleClass="texto-pixrecebido" text="R$ 2, 250.0" textFill="#fffafa" />
             <Label fx:id="datePixNovaes" layoutX="292.0" layoutY="88.0" text="22/03" textFill="#fff3f3" />
@@ -181,7 +181,7 @@
             </Label>
             <Label id="nomeFelipesaque" fx:id="nomeFelipeSaque" layoutX="132.0" layoutY="19.0" text="Felipe Lopes" textFill="#fff8f8" />
             <Label id="numeroContaLopes" fx:id="nomeFelipeConta" layoutX="14.0" layoutY="41.0" text="Lopes/08" textFill="#fff6f6" />
-            <Label layoutX="278.0" layoutY="19.0" text="R$80, 00" textFill="#fffafa">
+            <Label fx:id="valorSacadoLopes" layoutX="278.0" layoutY="19.0" text="R$80, 00" textFill="#fffafa">
                <styleClass>
                   <String fx:value="texto-pixrecebido" />
                   <String fx:value="texto-transferencia" />
