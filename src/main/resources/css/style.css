@@ -1,9 +1,5 @@
 .root{
-<<<<<<< HEAD
     -fx-background-color: #090909 ;
-=======
-    -fx-background-color: 090909;
->>>>>>> da6d93e5345500a3a0e198064dc94047a6240315
 }
 
 .card{
@@ -11,7 +7,6 @@
     -fx-background-radius: 20px 20px 20px 20px;
 }
 
-<<<<<<< HEAD
 .saldo-ver{
     -fx-background-color: #acacac;
      -fx-background-radius: 20px 20px 20px 20px;
@@ -154,5 +149,3 @@
     -fx-background-radius: 10;
     -fx-padding: 10;
 }
-
->>>>>>> da6d93e5345500a3a0e198064dc94047a6240315
