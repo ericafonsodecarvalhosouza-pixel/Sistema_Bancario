@@ -1,5 +1,9 @@
 .root{
+<<<<<<< HEAD
     -fx-background-color: #090909 ;
+=======
+    -fx-background-color: 090909;
+>>>>>>> da6d93e5345500a3a0e198064dc94047a6240315
 }
 
 .card{
@@ -54,12 +58,12 @@
 
 .sidebar{
     -fx-background-color: #3f1117;
+
 }
 
 .houver-sidebar-extrato{
     -fx-background-color:#591720;
 }
-
 .button-entrar-log{
     -fx-background-color: #acacac;
 }
@@ -80,36 +84,30 @@
   -fx-background-color: #5a0815;
     -fx-background-radius: 10;
     -fx-text-fill: white;
-    -fx-font-size: 18;
-    -fx-alignment: center-left;
 }
 
 .button-saque{
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 18;
-    -fx-alignment: center-left;
 }
 
 .button-deposito{
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 18;
-    -fx-alignment: center-left;
 }
 
 .button-transferencia{
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 18;
-    -fx-alignment: center-left;
 }
 
 .button-extrato{
     -fx-background-color: transparent;
     -fx-text-fill: white;
     -fx-font-size: 18;
-    -fx-alignment: center-left;
 }
 
 .box-center{
@@ -124,147 +122,33 @@
 
 .txt-bem-vindo{
     -fx-text-fill: #c0c0c0;
-    -fx-font-size: 16;
+    -fx-font-size: 18;
 }
 
 .card-saldo{
     -fx-background-color: linear-gradient(to right,#4b0010,#5e0616);
-    -fx-background-radius: 14;
+    -fx-background-radius: 20;
     -fx-boder-radius: 20;
 }
 
-.saldo-disponivel{
-    -fx-font-size: 13;
+.saldo-disponive{
+    -fx-font-size: 14;
     -fx-text-fill: white;
-    -fx-font-weight: bold;
 }
 
 .quantia-saldo{
-    -fx-font-size: 34;
+    -fx-font-size: 32;
     -fx-text-fill: white;
-    -fx-font-weight: bold;
 }
 
 .vbox-conta-corrente{
     -fx-background-color: rgba(255,255,255,0.15);
-    -fx-background-radius: 8;
+    -fx-background-radius: 10;
     -fx-padding: 10;
 }
 
 .vbox-agencia{
     -fx-background-color: rgba(255,255,255,0.15);
-    -fx-background-radius: 8;
+    -fx-background-radius: 10;
     -fx-padding: 10;
-}
-
-.vbox-saque{
-    -fx-background-color: #111111;
-    -fx-background-radius: 15;
-    -fx-padding: 20;
-}
-
-.vbox-deposito{
-    -fx-background-color: #111111;
-    -fx-background-radius: 15;
-    -fx-padding: 20;
-}
-
-.vbox-transferencia{
-    -fx-background-color: #111111;
-    -fx-background-radius: 15;
-    -fx-padding: 20;
-}
-
-.boderpane-deposito{
-    -fx-background-color: #000000;
-}
-
-.vbox-left{
-    -fx-background-color: #2a0008;
-}
-
-.scrollpane{
-    -fx-background-color: #000000;
-}
-
-.fundos{
-    -fx-font-size: 16;
-    -fx-text-fill: #39ff9f;
-}
-
-.card-deposito{
-    -fx-background-color: #3b0b12;
-    -fx-background-radius: 10;
-}
-
-.vbox-card-deposito{
-    -fx-background-color: #1a0005;
-    -fx-background-radius: 8;
-    -fx-padding: 8 10 8 10;
-}
-
-.card-formulario{
-    -fx-background-color: #333333;
-    -fx-background-radius: 10;
-}
-
-.campo-valor{
-    -fx-background-color: black;
-    -fx-background-radius: 6;
-}
-
-.txt-deposito{
-    -fx-font-size: 34;
-    -fx-font-weight: bold;
-    -fx-text-fill: white;
-}
-
-.txt-digite-valor{
-    -fx-text-fill: #bdbdbd;
-    -fx-font-size: 13;
-}
-
-.texto-valor{
-    -fx-text-fill: #bfbfbf;
-    -fx-font-size: 14;
-}
-
-.hbox-valor{
-    -fx-background-color: black;
-    -fx-background-radius: 6;
-}
-
-.rs-cifrao{
-    -fx-text-fill: white;
-    -fx-font-size: 16;
-}
-
-.text-field-valor{
-    -fx-background-color: transparent;
-    -fx-text-fill: white;
-    -fx-prompt-text-fill: #8a8a8a;
-    -fx-font-size: 18;
-}
-
-.button-depositar-pix{
-    -fx-background-color: #5a0b18;
-    -fx-background-radius: 6;
-    -fx-text-fill: white;
-    -fx-font-size: 16;
-    -fx-font-weight: bold;
-}
-
-.button-inicio-deposito{
-    -fx-background-color: transparent;
-    -fx-text-fill: white;
-    -fx-alignment: center-left;
-    -fx-font-size: 18;
-}
-
-.button-deposito2{
-    -fx-background-color: #5a0b18;
-    -fx-background-radius: 10;
-    -fx-text-fill: white;
-    -fx-alignment: center-left;
-    -fx-font-size: 18;
 }
