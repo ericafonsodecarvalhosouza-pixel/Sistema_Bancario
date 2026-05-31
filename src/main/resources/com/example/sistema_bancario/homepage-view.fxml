@@ -4,35 +4,81 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #000000;" styleClass="tela-inicio" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
    <left>
-      <VBox prefHeight="700.0" prefWidth="240.0" styleClass="box-left" stylesheets="@../../../css/style.css" BorderPane.alignment="CENTER">
+      <VBox prefHeight="700.0" prefWidth="240.0" spacing="22.0" styleClass="box-left" stylesheets="@../../../css/style.css" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Velvet Bank" textFill="WHITE">
+            <Label graphicTextGap="10.0" text="Velvet Bank" textFill="WHITE">
                <font>
-                  <Font size="19.0" />
+                  <Font name="System Bold" size="19.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/gem.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Label>
             <Label text="Seu futuro. nossa prioridade" textFill="WHITE" />
-            <Button fx:id="btnInicio" mnemonicParsing="false" styleClass="button-inicio" stylesheets="@../../../css/style.css" text="Início" />
-            <Button fx:id="btnSaque" mnemonicParsing="false" styleClass="button-saque" stylesheets="@../../../css/style.css" text="Saque" />
-            <Button fx:id="btnDeposito" mnemonicParsing="false" styleClass="button-deposito" stylesheets="@../../../css/style.css" text="Depósito" />
-            <Button fx:id="btnTransferencia" mnemonicParsing="false" styleClass="button-transferencia" stylesheets="@../../../css/style.css" text="Transferência" />
-            <Button fx:id="btnExtrato" mnemonicParsing="false" styleClass="button-extrato" stylesheets="@../../../css/style.css" text="Extrato" />
+            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-inicio" stylesheets="@../../../css/style.css" text="Início">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/wallet.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnSaque" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-saque" stylesheets="@../../../css/style.css" text="Saque">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/circle_arrow_up.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnDeposito" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-deposito" stylesheets="@../../../css/style.css" text="Depósito">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/circle_arrow_down.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnTransferencia" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-transferencia" stylesheets="@../../../css/style.css" text="Transferência">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/arrow_left_right.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnExtrato" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-extrato" stylesheets="@../../../css/style.css" text="Extrato">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/file_text.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
+         <padding>
+            <Insets bottom="24.0" left="16.0" right="16.0" top="24.0" />
+         </padding>
       </VBox>
    </left>
    <center>
-      <ScrollPane fitToWidth="true" pannable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" styleClass="boderpane" stylesheets="@../../../css/style.css" BorderPane.alignment="CENTER">
+      <ScrollPane fitToWidth="true" pannable="true" prefHeight="700.0" prefWidth="1040.0" style="-fx-background-color: black;" styleClass="boderpane" stylesheets="@../../../css/style.css" BorderPane.alignment="CENTER">
          <content>
-            <VBox prefHeight="700.0" prefWidth="980.0" spacing="25.0" style="-fx-background-color: black;" styleClass="box-center" stylesheets="@../../../css/style.css">
+            <VBox minHeight="700.0" prefWidth="980.0" spacing="22.0" style="-fx-background-color: black;" styleClass="box-center" stylesheets="@../../../css/style.css">
                <padding>
                   <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                </padding>
@@ -43,22 +89,19 @@
                      </font>
                   </Label>
                   <Label styleClass="txt-bem-vindo" stylesheets="@../../../css/style.css" text="Bem-vinda ao seu painel bancário" textFill="WHITE" />
-                  <AnchorPane prefHeight="170.0" prefWidth="980.0" styleClass="card-saldo" stylesheets="@../../../css/style.css">
+                  <AnchorPane prefHeight="175.0" prefWidth="965.0" styleClass="card-saldo" stylesheets="@../../../css/style.css">
                      <children>
-                        <VBox layoutX="118.0" layoutY="-44.0" prefWidth="400.0" spacing="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
-                           <padding>
-                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
-                           </padding>
+                        <VBox layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>
-                              <Label styleClass="saldo-disponive" stylesheets="@../../../css/style.css" text="Saldo disponível" textFill="WHITE" />
-                              <Label prefHeight="47.0" prefWidth="175.0" styleClass="quantia-saldo" stylesheets="@../../../css/style.css" text="R$ 5.430,75" textFill="WHITE">
+                              <Label styleClass="saldo-disponivel" stylesheets="@../../../css/style.css" text="Saldo disponível" textFill="WHITE" />
+                              <Label prefHeight="50.0" prefWidth="187.0" styleClass="quantia-saldo" stylesheets="@../../../css/style.css" text="R$ 5.430,75" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                              <HBox prefHeight="100.0" prefWidth="200.0" spacing="12.0">
                                  <children>
-                                    <VBox prefHeight="85.0" prefWidth="112.0" styleClass="vbox-conta-corrente" stylesheets="@../../../css/style.css">
+                                    <VBox layoutX="28.0" layoutY="22.0" prefHeight="50.0" prefWidth="110.0" spacing="1.0" styleClass="vbox-conta-corrente" stylesheets="@../../../css/style.css">
                                        <children>
                                           <Label text="Conta Corrente" textFill="WHITE" />
                                           <Label text="0001-5" textFill="WHITE">
@@ -67,8 +110,11 @@
                                              </font>
                                           </Label>
                                        </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+                                       </padding>
                                     </VBox>
-                                    <VBox prefHeight="200.0" prefWidth="100.0" styleClass="vbox-agencia" stylesheets="@../../../css/style.css">
+                                    <VBox layoutX="28.0" layoutY="22.0" prefHeight="50.0" prefWidth="80.0" spacing="1.0" styleClass="vbox-agencia" stylesheets="@../../../css/style.css">
                                        <children>
                                           <Label text="Agência" textFill="WHITE" />
                                           <Label text="1256" textFill="WHITE">
@@ -77,6 +123,9 @@
                                              </font>
                                           </Label>
                                        </children>
+                                       <padding>
+                                          <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
+                                       </padding>
                                     </VBox>
                                  </children>
                               </HBox>
@@ -89,16 +138,50 @@
                         <Font name="System Bold" size="22.0" />
                      </font>
                   </Label>
-                  <HBox prefHeight="160.0" spacing="20.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="130.0" prefWidth="920.0" spacing="20.0">
                      <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        <VBox alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="vbox-saque" stylesheets="@../../../css/style.css">
                            <children>
-                              <Label text="Label" textFill="WHITE" />
-                              <Label text="Label" />
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imagens/circle_arrow_up.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Saque" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="99.0" text="Realizar saque" textFill="WHITE" />
                            </children>
                         </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0" />
-                        <VBox prefHeight="200.0" prefWidth="100.0" />
+                        <VBox alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="vbox-deposito" stylesheets="@../../../css/style.css">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imagens/circle_arrow_down.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Depósito" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="99.0" text="Adicionar fundos" textFill="WHITE" />
+                           </children></VBox>
+                        <VBox alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="vbox-transferencia" stylesheets="@../../../css/style.css">
+                           <children>
+                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imagens/arrow_left_right.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Transferência" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Enviar dinheiro" textFill="WHITE" />
+                           </children></VBox>
                      </children>
                   </HBox>
                </children>

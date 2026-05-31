@@ -1,5 +1,9 @@
 .root{
+<<<<<<< HEAD
     -fx-background-color: #090909 ;
+=======
+    -fx-background-color: 090909;
+>>>>>>> da6d93e5345500a3a0e198064dc94047a6240315
 }
 
 .card{
@@ -60,7 +64,6 @@
 .houver-sidebar-extrato{
     -fx-background-color:#591720;
 }
-=======
 .button-entrar-log{
     -fx-background-color: #acacac;
 }
