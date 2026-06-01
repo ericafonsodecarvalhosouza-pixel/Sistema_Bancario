@@ -1,11 +1,7 @@
 .root{
-<<<<<<< HEAD
-    -fx-background-color: #090909 ;
-=======
-    -fx-background-color: 090909;
->>>>>>> da6d93e5345500a3a0e198064dc94047a6240315
-}
 
+    -fx-background-color: #090909 ;
+}
 .card{
     -fx-background-color: #3f1117;
     -fx-background-radius: 20px 20px 20px 20px;
