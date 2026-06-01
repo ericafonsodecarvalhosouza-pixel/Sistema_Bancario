@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -49,6 +51,45 @@
                </font>
             </Label>
             <ComboBox fx:id="tipoDeConta" layoutX="273.0" layoutY="430.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="sidebar" fx:id="sidebar" prefHeight="759.0" prefWidth="167.0" styleClass="sidebar">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="14.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/plus.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomeBanco" layoutX="45.0" layoutY="43.0" prefHeight="30.0" prefWidth="117.0" text="Velvert Bank" textFill="#ffeded">
+               <font>
+                  <Font name="Webdings" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="37.0" fitWidth="69.0" layoutX="15.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/mais.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="64.0" layoutX="8.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/simbolodobanco.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="48.0" layoutX="15.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../icons/biblioteca.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="extratoHover" layoutX="-4.0" layoutY="99.0" prefHeight="50.0" prefWidth="194.0" styleClass="houver-sidebar-extrato" text="           Extrato" textFill="#e7e2e2">
+               <font>
+                  <Font name="Webdings" size="20.0" />
+               </font>
+            </Label>
+            <Label id="extratobiblioteca-Extrato" fx:id="extratoSidebar" layoutX="68.0" layoutY="168.0" prefHeight="30.0" prefWidth="117.0" text="Extrato" textFill="#eae8e8">
+               <font>
+                  <Font name="Webdings" size="20.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
