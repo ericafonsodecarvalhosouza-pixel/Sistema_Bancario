@@ -1,12 +1,14 @@
 package com.example.sistema_bancario.controller.Controllersinterfaces;
 
+import com.example.sistema_bancario.domínios.Contas.Conta;
+import com.example.sistema_bancario.domínios.cliente.Cliente;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import com.example.sistema_bancario.domínios.Banco;
+import com.example.sistema_bancario.domínios.Contas.ContaCorrente;
+import com.example.sistema_bancario.domínios.Contas.ContaPoupanca;
 
 public class PrincipalControllerInterface {
 
@@ -32,7 +34,7 @@ public class PrincipalControllerInterface {
     private PasswordField labelSenha;
 
     @FXML
-    private ComboBox<?> tipoDeConta;
+    private ComboBox<String> tipoDeConta;
 
     @FXML
     private Label tituloCadastro;
@@ -175,40 +177,50 @@ public class PrincipalControllerInterface {
     @FXML
     private AnchorPane valorSacadoLopes;
 
-    private Usuarios usuariosSelecionar;
-
-    private List<Usuarios> listaDeUsuarios = new ArrayList<>();
-
-
-    public void receberDadosCadastro(Usuarios usuario ){
-        tituloCadastro.setText("Seja Bem Vindo(a) " + usuario.getNome());
+    @FXML
+    public void initialize(){
+        tipoDeConta.getItems().addAll(
+                "Conta Corrente",
+                "Conta Poupança"
+        );
     }
 
+    public void receberDadosCadastro(Cliente cliente ){
+        tituloCadastro.setText("Seja Bem Vindo(a) " + cliente.getNome());
+    }
 
     @FXML
-    public void botaoCadastrar(){
+    public void botaoCadastrar() {
 
         String nome = labelNome.getText();
         String email = labelEmail.getText();
         String cpf = labelCpf.getText();
         String senha = labelSenha.getText();
 
-    if(Objects.nonNull(usuariosSelecionar)){
-        usuariosSelecionar.setNome(nome);
-        usuariosSelecionar.setEmail(email);
-        usuariosSelecionar.setCpf(cpf);
-        usuariosSelecionar.setSenha(senha);
+        if(tipoDeConta.getValue() == null){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setContentText("Selecione um tipo de conta.");
+            alert.showAndWait();
 
-        usuariosSelecionar = null;
+            return;
+        }
 
-    }else{
-        Usuarios usuario = new Usuarios(nome, email, senha, cpf);
-        listaDeUsuarios.add(usuario);
-    }
+        Cliente cliente = new Cliente(nome, email, cpf, senha);
+        Conta conta;
 
-    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-    alert.setContentText("Usuário salvo com sucesso!");
-    alert.showAndWait();
+        if (tipoDeConta.getValue().equals("Conta Corrente")) {
+            conta = new ContaCorrente(cliente, 500);
+        }else{
+            conta = new ContaPoupanca(cliente);
+        }
+
+        Banco.cadastroContas.add(conta);
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Usuário salvo com sucesso!");
+        alert.showAndWait();
+
+        limparCampos();
     }
 
     public void limparCampos(){
@@ -217,8 +229,7 @@ public class PrincipalControllerInterface {
         labelEmail.setText("");
         labelSenha.setText("");
         labelCpf.setText("");
+
+        tipoDeConta.setValue(null);
     }
-
-
-
 }
