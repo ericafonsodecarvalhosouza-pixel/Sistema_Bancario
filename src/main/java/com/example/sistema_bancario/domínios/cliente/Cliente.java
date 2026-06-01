@@ -13,7 +13,7 @@ public class Cliente {
     public Cliente(String nome, String email, String CPF, String senha) {
         this.nome = nome;
 
-        if (validarEmail(email)){
+        if (!validarEmail(email)){
             throw new loginInvalidoexception("Email Inválido.");
         }
 
@@ -40,7 +40,7 @@ public class Cliente {
     }
 
     public void setEmail(String email) {
-        if (validarEmail(email)){
+        if (!validarEmail(email)){
             throw new loginInvalidoexception("Email inválido.");
         }
         this.email = email;
@@ -75,7 +75,7 @@ public class Cliente {
             return false;
         }
 
-        if (!email.endsWith("@gmail.com") || !email.endsWith("@hotmail.com")){
+        if (!email.endsWith("@gmail.com") && !email.endsWith("@hotmail.com")){
             return false;
         }
 
