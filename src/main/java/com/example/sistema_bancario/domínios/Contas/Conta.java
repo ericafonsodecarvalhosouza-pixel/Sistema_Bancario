@@ -52,8 +52,9 @@ public class Conta {
     }
 
     public void sacar(double valor){
-        if (valor > saldo){
-            throw new saldoInsuficienteException("Valor maior que o saldo em conta.");
+        if (valor <= 0) {
+            throw new valorInvalidoException(
+                    "O valor do saque deve ser maior que zero.");
         }
 
         if(valor > saldo){
