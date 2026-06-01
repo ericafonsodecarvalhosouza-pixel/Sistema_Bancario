@@ -42,6 +42,10 @@ public class Conta {
     }
 
     public void depositar(double valor){
+
+        if(valor <= 0){
+            throw new valorInvalidoException("O valor do depósito deve ser maior que zero!");
+        }
         saldo += valor;
 
         criarAMovimentacao(TipoMovimentacao.DEPOSITO, valor, "Deposito realizado.");
@@ -50,6 +54,10 @@ public class Conta {
     public void sacar(double valor){
         if (valor > saldo){
             throw new saldoInsuficienteException("Valor maior que o saldo em conta.");
+        }
+
+        if(valor > saldo){
+            throw new saldoInsuficienteException("valor maior que o saldo da conta");
         }
 
         saldo -= valor;
