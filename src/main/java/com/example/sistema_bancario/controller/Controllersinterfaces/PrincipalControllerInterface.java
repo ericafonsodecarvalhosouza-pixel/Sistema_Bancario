@@ -10,6 +10,8 @@ import com.example.sistema_bancario.domínios.Banco;
 import com.example.sistema_bancario.domínios.Contas.ContaCorrente;
 import com.example.sistema_bancario.domínios.Contas.ContaPoupanca;
 
+import com.example.sistema_bancario.exceptions.loginInvalidoexception;
+
 public class PrincipalControllerInterface {
 
     @FXML
@@ -192,10 +194,20 @@ public class PrincipalControllerInterface {
     @FXML
     public void botaoCadastrar() {
 
-        String nome = labelNome.getText();
-        String email = labelEmail.getText();
-        String cpf = labelCpf.getText();
-        String senha = labelSenha.getText();
+        String nome = labelNome.getText().trim();
+        String email = labelEmail.getText().trim();
+        String cpf = labelCpf.getText().trim();
+        String senha = labelSenha.getText().trim();
+
+        if(nome.isEmpty()){
+            mostrarErro("Digite seu nome: ");
+            return;
+        }
+
+        if(cpf.isEmpty()){
+            mostrarErro("Digite seu cpf: ");
+            return;
+        }
 
         if(tipoDeConta.getValue() == null){
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -205,22 +217,37 @@ public class PrincipalControllerInterface {
             return;
         }
 
-        Cliente cliente = new Cliente(nome, email, cpf, senha);
-        Conta conta;
+        try{
 
-        if (tipoDeConta.getValue().equals("Conta Corrente")) {
-            conta = new ContaCorrente(cliente, 500);
-        }else{
-            conta = new ContaPoupanca(cliente);
+            Cliente cliente = new Cliente(nome, email, cpf, senha);
+            Conta conta;
+
+            if (tipoDeConta.getValue().equals("Conta Corrente")) {
+                conta = new ContaCorrente(cliente, 500);
+            }else{
+                conta = new ContaPoupanca(cliente);
+            }
+
+            Banco.cadastroContas.add(conta);
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Usuário salvo com sucesso!");
+            alert.showAndWait();
+
+            limparCampos();
+
+        }catch(loginInvalidoexception e){
+            mostrarErro(e.getMessage());
         }
+    }
 
-        Banco.cadastroContas.add(conta);
+    public void mostrarErro(String mensagem){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erro");
+        alert.setHeaderText(null);
+        alert.setContentText(mensagem);
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Usuário salvo com sucesso!");
         alert.showAndWait();
-
-        limparCampos();
     }
 
     public void limparCampos(){

@@ -64,6 +64,4 @@ public class SaqueController {
         valordiponivel.setText(String.format("R$ " + conta.getSaldo()));
         }
     }
-
-
 }
