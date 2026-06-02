@@ -54,7 +54,6 @@
 
 .sidebar{
     -fx-background-color: #3f1117;
-
 }
 
 .houver-sidebar-extrato{
@@ -77,7 +76,7 @@
 }
 
 .button-inicio{
-  -fx-background-color: #5a0815;
+    -fx-background-color: #5a0815;
     -fx-background-radius: 10;
     -fx-text-fill: white;
 }
