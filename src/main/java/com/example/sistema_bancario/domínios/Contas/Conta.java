@@ -1,9 +1,11 @@
 package com.example.sistema_bancario.domínios.Contas;
 
+import com.example.sistema_bancario.domínios.Banco;
 import com.example.sistema_bancario.domínios.movimentacao.Movimentacao;
 import com.example.sistema_bancario.domínios.cliente.Cliente;
 import com.example.sistema_bancario.enums.TipoMovimentacao;
 import com.example.sistema_bancario.exceptions.clienteInvalidoException;
+import com.example.sistema_bancario.exceptions.destinoInvalidoException;
 import com.example.sistema_bancario.exceptions.saldoInsuficienteException;
 import com.example.sistema_bancario.exceptions.valorInvalidoException;
 
@@ -69,4 +71,31 @@ public class Conta {
     public void criarAMovimentacao(TipoMovimentacao tipo, double valor, String descricao){
         movimentacoes.add(new Movimentacao(tipo, valor, descricao));
     }
+
+    public void transferir(String cpfDestino, double valor){
+
+        if (valor <= 0){
+            throw new saldoInsuficienteException("Valor inválido.");
+        }
+
+        if (this.saldo < valor){
+            throw new saldoInsuficienteException("Saldo insuficiente para transferência.");
+        }
+
+        Conta destino = Banco.buscarCPF(cpfDestino);
+
+        if (Objects.isNull(destino)){
+            throw new destinoInvalidoException("Não existe o destino solicitado.");
+        }
+
+        this.sacar(valor);
+        destino.depositar(valor);
+
+        criarAMovimentacao(TipoMovimentacao.TRANSFERENCIA_ENVIADA, valor, "Transferência realizada.");
+        destino.criarAMovimentacao(TipoMovimentacao.TRANSFERENCIA_RECEBIDA, valor, "Transferência recebida.");
+
+    }
+
+
+
 }
