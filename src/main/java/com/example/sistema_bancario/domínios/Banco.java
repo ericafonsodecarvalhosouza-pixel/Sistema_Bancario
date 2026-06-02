@@ -9,4 +9,13 @@ public class Banco {
 
      public static List<Conta> cadastroContas = new ArrayList<>();
 
+     public static Conta buscarCPF(String cpf){
+         for (Conta conta: cadastroContas){
+             if(conta.getCliente().getCPF().equals(cpf)){
+                 return conta;
+             }
+         }
+         return null;
+     }
+
 }
