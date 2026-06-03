@@ -1,17 +1,21 @@
 package com.example.sistema_bancario.controller;
+import com.example.sistema_bancario.controller.Controllersinterfaces.PrincipalControllerInterface;
 import com.example.sistema_bancario.domínios.Banco;
-import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.domínios.Contas.ContaCorrente;
 import com.example.sistema_bancario.domínios.Contas.ContaPoupanca;
 import com.example.sistema_bancario.domínios.cliente.Cliente;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.stage.Stage;
 
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 public class LoginController {
 
@@ -28,7 +32,7 @@ public class LoginController {
     @FXML
     private PasswordField passwordField;
 
-    public void init() {
+    public List<Cliente> init() {
 
         Cliente cliente1 = new Cliente(
                 "João Silva",
@@ -50,8 +54,39 @@ public class LoginController {
 
         Banco.cadastroContas.add(conta1);
         Banco.cadastroContas.add(conta2);
+        return null;
     }
 
+    public void entrar(ActionEvent event) throws IOException {
+        List<Cliente> clientes = init();
+        String email = emailField.getText();
+        String senha = passwordField.getText();
+        Cliente clienteEncontrado = clientes.stream().filter(c ->
+                c.getEmail().equals(email) && c.getSenha().equals(senha)).findFirst()
+                .orElse(null);
+        if (Objects.nonNull(clienteEncontrado)) {
 
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("com/exemple/sistema_bancaraio/homepage-view.fxml"));
+            Parent root = loader.load();
+
+            PrincipalControllerInterface principalControllerInterface = loader.getController();
+
+            principalControllerInterface.receberDadosCadastro(clienteEncontrado);
+
+            Stage stage = (Stage) ((Node)
+                    event.getSource()).getScene().getWindow();
+
+            stage.setScene(new Scene(root));
+            stage.show();
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Login");
+            alert.setContentText("Email ou senha inválida!");
+            alert.setHeaderText("Mensagem");
+            alert.showAndWait();
+
+        }
+
+    }
 
 }
