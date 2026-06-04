@@ -1,4 +1,4 @@
-package com.example.sistema_bancario.controller.Controllersinterfaces;
+package com.example.sistema_bancario.controller.LoginECadastroControllers;
 
 import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.domínios.cliente.Cliente;
@@ -12,7 +12,7 @@ import com.example.sistema_bancario.domínios.Contas.ContaPoupanca;
 
 import com.example.sistema_bancario.exceptions.loginInvalidoexception;
 
-public class PrincipalControllerInterface {
+public class CadastroController {
 
     @FXML
     private Button btnCadastrar;

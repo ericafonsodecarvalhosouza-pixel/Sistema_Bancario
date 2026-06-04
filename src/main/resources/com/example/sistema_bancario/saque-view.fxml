@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="fundoSaque" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controller.Controllersinterfaces.SaqueController">
+<AnchorPane fx:id="fundoSaque" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controller.ServicosController.SaqueController">
    <children>
       <AnchorPane fx:id="cardSaque" layoutX="357.0" layoutY="40.0" prefHeight="620.0" prefWidth="524.0" styleClass="card" stylesheets="@../../../css/style.css">
          <children>

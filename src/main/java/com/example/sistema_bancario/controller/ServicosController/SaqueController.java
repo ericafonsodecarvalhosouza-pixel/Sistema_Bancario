@@ -1,5 +1,6 @@
-package com.example.sistema_bancario.controller.Controllersinterfaces;
+package com.example.sistema_bancario.controller.ServicosController;
 
+import com.example.sistema_bancario.domínios.Banco;
 import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.exceptions.saldoInsuficienteException;
 import com.example.sistema_bancario.exceptions.valorInvalidoException;
@@ -59,6 +60,8 @@ public class SaqueController {
 
     }
     private void atualizarSaldo(){
+
+        conta = Banco.contaLogada;
 
         if(conta != null){
             valorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
