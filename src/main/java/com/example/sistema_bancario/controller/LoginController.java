@@ -14,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -33,6 +34,7 @@ public class LoginController {
     private PasswordField passwordField;
 
     public List<Cliente> init() {
+        List<Cliente> clientes = new ArrayList<>();
 
         Cliente cliente1 = new Cliente(
                 "João Silva",
@@ -52,10 +54,16 @@ public class LoginController {
 
         ContaPoupanca conta2 = new ContaPoupanca(cliente2);
 
-        Banco.cadastroContas.add(conta1);
-        Banco.cadastroContas.add(conta2);
-        return null;
+        if (Banco.cadastroContas.isEmpty()) {
+            Banco.cadastroContas.add(conta1);
+            Banco.cadastroContas.add(conta2);
+        }
+
+        return clientes;
     }
+
+
+
 
     public void entrar(ActionEvent event) throws IOException {
         List<Cliente> clientes = init();

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Banco {
+    public static Conta contaLogada;
 
      public static List<Conta> cadastroContas = new ArrayList<>();
 
