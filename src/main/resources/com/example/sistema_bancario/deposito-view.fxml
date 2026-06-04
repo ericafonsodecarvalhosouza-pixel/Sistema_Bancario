@@ -95,7 +95,7 @@
                         <VBox layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>
                               <Label layoutX="32.0" layoutY="25.0" styleClass="saldo-disponivel" stylesheets="@../../../css/style.css" text="Saldo disponível" textFill="WHITE" />
-                              <Label layoutX="32.0" layoutY="55.0" prefHeight="50.0" prefWidth="187.0" styleClass="quantia-saldo" stylesheets="@../../../css/style.css" text="R$ 5.430,75" textFill="WHITE">
+                              <Label fx:id="lblValorDisponivel" layoutX="32.0" layoutY="55.0" prefHeight="50.0" prefWidth="187.0" styleClass="quantia-saldo" stylesheets="@../../../css/style.css" text="R$ 5.430,75" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
@@ -137,13 +137,13 @@
                         <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="905.0" spacing="12.0" styleClass="hbox-valor" stylesheets="@../../../css/style.css">
                            <children>
                               <Label styleClass="rs-cifrao" stylesheets="@../../../css/style.css" text="R$" textFill="WHITE" />
-                              <TextField prefHeight="75.0" prefWidth="780.0" promptText="0.00" styleClass="text-field-valor" stylesheets="@../../../css/style.css" />
+                              <TextField fx:id="txtDigitarValorDeposito" prefHeight="75.0" prefWidth="780.0" promptText="0.00" styleClass="text-field-valor" stylesheets="@../../../css/style.css" />
                            </children>
                            <padding>
                               <Insets left="16.0" right="16.0" />
                            </padding>
                         </HBox>
-                        <Button fx:id="btnDepositarPix" mnemonicParsing="false" prefHeight="50.0" prefWidth="905.0" styleClass="button-depositar-pix" stylesheets="@../../../css/style.css" text="Depositar via PIX" />
+                        <Button fx:id="btnDepositarPix" mnemonicParsing="false" onAction="#confirmarDeposito" prefHeight="50.0" prefWidth="905.0" styleClass="button-depositar-pix" stylesheets="@../../../css/style.css" text="Depositar via PIX" />
                      </children>
                   </VBox>
                </children>
