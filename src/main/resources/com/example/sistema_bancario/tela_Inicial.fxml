@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #000000;" styleClass="tela-inicio" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/tela_inicio.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
    <left>
-      <VBox prefHeight="700.0" prefWidth="240.0" spacing="22.0" styleClass="box-left" stylesheets="@../../../css/style.css" BorderPane.alignment="CENTER">
+      <VBox prefHeight="700.0" prefWidth="240.0" spacing="22.0" styleClass="sidebar" stylesheets="@../../../css/tela_inicio.css" BorderPane.alignment="CENTER">
          <children>
             <Label graphicTextGap="10.0" text="Velvet Bank" textFill="WHITE">
                <font>
@@ -29,7 +29,7 @@
                </graphic>
             </Label>
             <Label text="Seu futuro. nossa prioridade" textFill="WHITE" />
-            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-inicio" stylesheets="@../../../css/style.css" text="Início">
+            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Início">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -37,7 +37,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button fx:id="btnSaque" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-saque" stylesheets="@../../../css/style.css" text="Saque">
+            <Button fx:id="btnSaque" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button" stylesheets="@../../../css/tela_inicio.css" text="Saque">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -45,7 +45,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button fx:id="btnDeposito" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-deposito" stylesheets="@../../../css/style.css" text="Depósito">
+            <Button fx:id="btnDeposito" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button" stylesheets="@../../../css/tela_inicio.css" text="Depósito">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -53,7 +53,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button fx:id="btnTransferencia" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-transferencia" stylesheets="@../../../css/style.css" text="Transferência">
+            <Button fx:id="btnTransferencia" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button" stylesheets="@../../../css/tela_inicio.css" text="Transferência">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -61,7 +61,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button fx:id="btnExtrato" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-extrato" stylesheets="@../../../css/style.css" text="Extrato">
+            <Button fx:id="btnExtrato" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button" stylesheets="@../../../css/tela_inicio.css" text="Extrato">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -76,25 +76,25 @@
       </VBox>
    </left>
    <center>
-      <ScrollPane fitToWidth="true" pannable="true" prefHeight="700.0" prefWidth="1040.0" style="-fx-background-color: black;" styleClass="boderpane" stylesheets="@../../../css/style.css" BorderPane.alignment="CENTER">
+      <ScrollPane fitToWidth="true" pannable="true" prefHeight="700.0" prefWidth="1040.0" styleClass="main-scroll" stylesheets="@../../../css/tela_inicio.css" BorderPane.alignment="CENTER">
          <content>
-            <VBox minHeight="700.0" prefWidth="980.0" spacing="22.0" style="-fx-background-color: black;" styleClass="box-center" stylesheets="@../../../css/style.css">
+            <VBox minHeight="700.0" prefWidth="980.0" spacing="22.0" styleClass="main-content" stylesheets="@../../../css/tela_inicio.css">
                <padding>
                   <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                </padding>
                <children>
-                  <Label styleClass="txt-ola" stylesheets="@../../../css/style.css" text="Olá, Maria!" textFill="WHITE">
+                  <Label styleClass="title" stylesheets="@../../../css/tela_inicio.css" text="Olá, Maria!" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Label styleClass="txt-bem-vindo" stylesheets="@../../../css/style.css" text="Bem-vinda ao seu painel bancário" textFill="WHITE" />
-                  <AnchorPane prefHeight="175.0" prefWidth="965.0" styleClass="card-saldo" stylesheets="@../../../css/style.css">
+                  <Label styleClass="subtitle" stylesheets="@../../../css/tela_inicio.css" text="Bem-vinda ao seu painel bancário" textFill="WHITE" />
+                  <AnchorPane prefHeight="175.0" prefWidth="965.0" styleClass="balance-card" stylesheets="@../../../css/tela_inicio.css">
                      <children>
                         <VBox layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>
-                              <Label styleClass="saldo-disponivel" stylesheets="@../../../css/style.css" text="Saldo disponível" textFill="WHITE" />
-                              <Label prefHeight="50.0" prefWidth="187.0" styleClass="quantia-saldo" stylesheets="@../../../css/style.css" text="R$ 5.430,75" textFill="WHITE">
+                              <Label styleClass="banco-subtitulo" stylesheets="@../../../css/tela_inicio.css" text="Saldo disponível" textFill="WHITE" />
+                              <Label prefHeight="50.0" prefWidth="187.0" styleClass="balance-value" stylesheets="@../../../css/tela_inicio.css" text="R$ 5.430,75" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
@@ -140,7 +140,7 @@
                   </Label>
                   <HBox alignment="CENTER_LEFT" prefHeight="130.0" prefWidth="920.0" spacing="20.0">
                      <children>
-                        <VBox alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="vbox-saque" stylesheets="@../../../css/style.css">
+                        <VBox alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="quick-card" stylesheets="@../../../css/tela_inicio.css">
                            <children>
                               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -154,7 +154,7 @@
                               <Label alignment="CENTER" prefHeight="17.0" prefWidth="99.0" text="Realizar saque" textFill="WHITE" />
                            </children>
                         </VBox>
-                        <VBox alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="vbox-deposito" stylesheets="@../../../css/style.css">
+                        <VBox alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="quick-card" stylesheets="@../../../css/tela_inicio.css">
                            <children>
                               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -168,7 +168,7 @@
                               </Label>
                               <Label prefHeight="17.0" prefWidth="99.0" text="Adicionar fundos" textFill="WHITE" />
                            </children></VBox>
-                        <VBox alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="vbox-transferencia" stylesheets="@../../../css/style.css">
+                        <VBox alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="quick-card" stylesheets="@../../../css/tela_inicio.css">
                            <children>
                               <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
