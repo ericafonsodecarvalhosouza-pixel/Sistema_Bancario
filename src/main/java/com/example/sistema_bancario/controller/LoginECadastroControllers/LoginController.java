@@ -1,4 +1,5 @@
 package com.example.sistema_bancario.controller.LoginECadastroControllers;
+import com.example.sistema_bancario.controller.utils.GerenciadorTelas;
 import com.example.sistema_bancario.domínios.Banco;
 import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.domínios.Contas.ContaCorrente;
@@ -47,18 +48,8 @@ public class LoginController {
         if (Objects.nonNull(contaEncontrada)) {
             Banco.contaLogada = contaEncontrada;
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("com/example/sistema_bancario/tela_Inicial.fxml"));
-            Parent root = loader.load();
+            GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
 
-            CadastroController cadastroController = loader.getController();
-
-            cadastroController.receberDadosCadastro(contaEncontrada.getCliente());
-
-            Stage stage = (Stage) ((Node)
-                    event.getSource()).getScene().getWindow();
-
-            stage.setScene(new Scene(root));
-            stage.show();
         }else{
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Login");
@@ -67,6 +58,13 @@ public class LoginController {
             alert.showAndWait();
 
         }
+
+
+
+    }
+
+    public void direcionarParaCadastro(ActionEvent event) throws IOException{
+        GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/cadastro.fxml");
 
     }
 
