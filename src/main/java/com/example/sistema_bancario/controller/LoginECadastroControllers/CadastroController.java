@@ -1,7 +1,10 @@
-package com.example.sistema_bancario.controllers;
 
+package com.example.sistema_bancario.controller.LoginECadastroControllers;
+
+import com.example.sistema_bancario.controller.utils.GerenciadorTelas;
 import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.domínios.cliente.Cliente;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -12,7 +15,9 @@ import com.example.sistema_bancario.domínios.Contas.ContaPoupanca;
 
 import com.example.sistema_bancario.exceptions.loginInvalidoexception;
 
-public class PrincipalControllerInterface {
+import java.io.IOException;
+
+public class CadastroController {
 
     @FXML
     private Button btnCadastrar;
@@ -192,7 +197,7 @@ public class PrincipalControllerInterface {
     }
 
     @FXML
-    public void botaoCadastrar() {
+    public void botaoCadastrar(ActionEvent event) throws IOException {
 
         String nome = labelNome.getText().trim();
         String email = labelEmail.getText().trim();
@@ -235,6 +240,8 @@ public class PrincipalControllerInterface {
             alert.showAndWait();
 
             limparCampos();
+
+            GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
 
         }catch(loginInvalidoexception e){
             mostrarErro(e.getMessage());

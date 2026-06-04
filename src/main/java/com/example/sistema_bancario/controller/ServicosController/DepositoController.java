@@ -1,5 +1,6 @@
-package com.example.sistema_bancario.controllers;
+package com.example.sistema_bancario.controller.ServicosController;
 
+import com.example.sistema_bancario.domínios.Banco;
 import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.exceptions.saldoInsuficienteException;
 import com.example.sistema_bancario.exceptions.valorInvalidoException;
@@ -8,41 +9,43 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-
-public class SaqueController {
-    @FXML
-    private TextField digitarValorSaque;
+public class DepositoController {
 
     @FXML
-    private Label valordiponivel;
+    private TextField txtDigitarValorDeposito;
+
+    @FXML
+    private Label lblValorDisponivel;
+
 
     private Conta conta;
+
 
     public void setConta(Conta conta){
         this.conta = conta;
         atualizarSaldo();
     }
 
-
     @FXML
-    private void confiarmarSaque(){
+    private void confirmarDeposito(){
         try {
-            double valor = Double.parseDouble(digitarValorSaque.getText());
-            conta.sacar(valor);
+            double valor = Double.parseDouble(txtDigitarValorDeposito.getText());
+            conta.depositar(valor);
             atualizarSaldo();
 
+
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Saque");
-            alert.setHeaderText("Parabéns!");
-            alert.setContentText("Saque realizado com sucesso!");
+            alert.setTitle("Depósito");
+            alert.setTitle("Sucesso!");
+            alert.setContentText("Seu depósito foi realizado com sucesso!");
             alert.showAndWait();
 
-            digitarValorSaque.clear();
+            txtDigitarValorDeposito.clear();
         }catch (valorInvalidoException ex){
             alertaDeErro(ex.getMessage());
 
         }catch (saldoInsuficienteException ex){
-           alertaDeErro(ex.getMessage());
+            alertaDeErro(ex.getMessage());
 
         }catch (NumberFormatException ex){
             alertaDeErro("Digite um valor númerico válido!");
@@ -60,8 +63,13 @@ public class SaqueController {
     }
     private void atualizarSaldo(){
 
+        conta = Banco.contaLogada;
+
         if(conta != null){
-        valordiponivel.setText(String.format("R$ " + conta.getSaldo()));
+            lblValorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
         }
     }
 }
+
+
+

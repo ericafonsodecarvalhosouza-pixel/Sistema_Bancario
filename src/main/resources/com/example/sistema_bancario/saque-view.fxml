@@ -4,12 +4,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="fundoSaque" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controllers.SaqueController">
+
+<AnchorPane fx:id="fundoSaque" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controller.ServicosController.SaqueController">
+
    <children>
       <AnchorPane fx:id="cardSaque" layoutX="357.0" layoutY="40.0" prefHeight="620.0" prefWidth="524.0" styleClass="card" stylesheets="@../../../css/style.css">
          <children>
@@ -44,7 +45,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btnConfirmarSaque" layoutX="194.0" layoutY="476.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="136.0" text="Confirmar Saque" />
+            <Button fx:id="btnConfirmarSaque" layoutX="194.0" layoutY="476.0" mnemonicParsing="false" onAction="#confiarmarSaque" prefHeight="47.0" prefWidth="136.0" text="Confirmar Saque" />
          </children>
       </AnchorPane>
       <AnchorPane id="sidebar" fx:id="sidebar" layoutY="-13.0" prefHeight="759.0" prefWidth="167.0" styleClass="sidebar">

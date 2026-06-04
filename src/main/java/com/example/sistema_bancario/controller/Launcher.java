@@ -1,4 +1,4 @@
-package com.example.sistema_bancario.controllers;
+package com.example.sistema_bancario.controller;
 
 import javafx.application.Application;
 

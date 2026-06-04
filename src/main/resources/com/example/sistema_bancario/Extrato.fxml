@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="fundoExtrato" fx:id="valorRecebidoSilva" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane id="fundoExtrato" fx:id="valorRecebidoSilva" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controller.ServicosController.ExtratoController">
    <children>
       <Label fx:id="tituloExtrato" layoutX="599.0" layoutY="14.0" text="Extrato" textFill="WHITE">
          <font>
