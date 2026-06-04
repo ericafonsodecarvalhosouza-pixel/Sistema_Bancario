@@ -1,5 +1,6 @@
 package com.example.sistema_bancario.controller.Controllersinterfaces;
 
+import com.example.sistema_bancario.domínios.Banco;
 import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.exceptions.saldoInsuficienteException;
 import com.example.sistema_bancario.exceptions.valorInvalidoException;
@@ -61,6 +62,8 @@ public class DepositoController {
 
     }
     private void atualizarSaldo(){
+
+        conta = Banco.contaLogada;
 
         if(conta != null){
             lblValorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
