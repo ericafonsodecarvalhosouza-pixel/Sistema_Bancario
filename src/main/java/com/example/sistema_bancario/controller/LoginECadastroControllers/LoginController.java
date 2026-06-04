@@ -1,6 +1,6 @@
-package com.example.sistema_bancario.controller;
-import com.example.sistema_bancario.controller.Controllersinterfaces.PrincipalControllerInterface;
+package com.example.sistema_bancario.controller.LoginECadastroControllers;
 import com.example.sistema_bancario.domínios.Banco;
+import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.domínios.Contas.ContaCorrente;
 import com.example.sistema_bancario.domínios.Contas.ContaPoupanca;
 import com.example.sistema_bancario.domínios.cliente.Cliente;
@@ -33,53 +33,26 @@ public class LoginController {
     @FXML
     private PasswordField passwordField;
 
-    public List<Cliente> init() {
-        List<Cliente> clientes = new ArrayList<>();
-
-        Cliente cliente1 = new Cliente(
-                "João Silva",
-                "joao@gmail.com",
-                "11111111111",
-                "senha123"
-        );
-
-        ContaCorrente conta1 = new ContaCorrente(cliente1, 1000);
-
-        Cliente cliente2 = new Cliente(
-                "Maria Souza",
-                "maria@hotmail.com",
-                "22222222222",
-                "senha123"
-        );
-
-        ContaPoupanca conta2 = new ContaPoupanca(cliente2);
-
-        if (Banco.cadastroContas.isEmpty()) {
-            Banco.cadastroContas.add(conta1);
-            Banco.cadastroContas.add(conta2);
-        }
-
-        return clientes;
-    }
-
-
-
-
     public void entrar(ActionEvent event) throws IOException {
-        List<Cliente> clientes = init();
         String email = emailField.getText();
         String senha = passwordField.getText();
-        Cliente clienteEncontrado = clientes.stream().filter(c ->
-                c.getEmail().equals(email) && c.getSenha().equals(senha)).findFirst()
-                .orElse(null);
-        if (Objects.nonNull(clienteEncontrado)) {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("com/exemple/sistema_bancaraio/homepage-view.fxml"));
+        Conta contaEncontrada = Banco.cadastroContas.stream()
+                .filter(c ->
+                        c.getCliente().getEmail().equals(email)
+                                && c.getCliente().getSenha().equals(senha))
+                .findFirst()
+                .orElse(null);
+
+        if (Objects.nonNull(contaEncontrada)) {
+            Banco.contaLogada = contaEncontrada;
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("com/example/sistema_bancario/tela_Inicial.fxml"));
             Parent root = loader.load();
 
-            PrincipalControllerInterface principalControllerInterface = loader.getController();
+            CadastroController cadastroController = loader.getController();
 
-            principalControllerInterface.receberDadosCadastro(clienteEncontrado);
+            cadastroController.receberDadosCadastro(contaEncontrada.getCliente());
 
             Stage stage = (Stage) ((Node)
                     event.getSource()).getScene().getWindow();
