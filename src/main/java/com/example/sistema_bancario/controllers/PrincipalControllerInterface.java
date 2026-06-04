@@ -1,4 +1,4 @@
-package com.example.sistema_bancario.controller.Controllersinterfaces;
+package com.example.sistema_bancario.controllers;
 
 import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.domínios.cliente.Cliente;
