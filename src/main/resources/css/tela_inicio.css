@@ -91,19 +91,12 @@
 .info-box {
     -fx-background-color: rgba(255,255,255,0.15);
     -fx-background-radius: 8;
-    -fx-padding: 8 10 8 10;
-    -fx-spacing: 1;
+    -fx-alignment: center;
 }
 
 .info-title {
     -fx-text-fill: white;
     -fx-font-size: 11px;
-}
-
-.info-value {
-    -fx-text-fill: white;
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
 }
 
 /*Açoes rapidas*/
