@@ -17,34 +17,7 @@
             <Font name="Webdings" size="48.0" />
          </font>
       </Label>
-      <AnchorPane id="diashoje-Extrato" fx:id="hojeextrato" layoutX="350.0" layoutY="111.0" prefHeight="30.0" prefWidth="132.0" styleClass="icones-extrato">
-         <children>
-            <Label layoutX="45.0" layoutY="5.0" text="Hoje" textFill="#fffcfc">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="setediasextrato" layoutX="521.0" layoutY="111.0" prefHeight="30.0" prefWidth="132.0" styleClass="icones-extrato">
-         <children>
-            <Label id="setedias-Extrato" layoutX="45.0" layoutY="5.0" text="7 dias" textFill="#fffcfc">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="trintadiasExtrato" layoutX="691.0" layoutY="111.0" prefHeight="30.0" prefWidth="132.0" styleClass="icones-extrato">
-         <children>
-            <Label layoutX="45.0" layoutY="5.0" text="30 dias" textFill="#fffcfc">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="cardSaldoAtual" layoutX="465.0" layoutY="209.0" prefHeight="114.0" prefWidth="394.0">
+      <AnchorPane fx:id="cardSaldoAtual" layoutX="443.0" layoutY="143.0" prefHeight="114.0" prefWidth="394.0">
          <children>
             <Label fx:id="saldoatualTexto" layoutX="19.0" layoutY="14.0" text="Saldo Atual:" textFill="#fcf9f9">
                <font>
@@ -67,102 +40,11 @@
             <String fx:value="card-extrato" />
          </styleClass>
       </AnchorPane>
-      <Button fx:id="btnExtrato" layoutX="581.0" layoutY="662.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="118.0" styleClass="button-extrato-card" text="Extrato">
+      <Button fx:id="btnExtrato" layoutX="581.0" layoutY="416.0" mnemonicParsing="false" onAction="#gerarextrato" prefHeight="50.0" prefWidth="141.0" styleClass="button-extrato-card" text="Gerar Extrato">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <AnchorPane id="cardPixRecebido1" fx:id="valorRecebidoJoao" layoutX="269.0" layoutY="357.0" prefHeight="128.0" prefWidth="355.0">
-         <styleClass>
-            <String fx:value="button-extrato-card" />
-            <String fx:value="card-extrato-acoes" />
-         </styleClass>
-         <children>
-            <Label fx:id="pixRecebido1" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="95.0" text="Pix recebido-" textFill="#eae2e2">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label fx:id="nomeJoaoPix" layoutX="109.0" layoutY="19.0" text="João Silva" textFill="#fff8f8" />
-            <Label id="numeroContaSlva" fx:id="nomeJoaoConta" layoutX="14.0" layoutY="41.0" text="Silva/05" textFill="#fff6f6" />
-            <Label fx:id="pixRecebidoValorSilva" layoutX="278.0" layoutY="19.0" styleClass="texto-pixrecebido" text="R$ 25,00" textFill="#fffafa" />
-            <Label fx:id="datePixSilva" layoutX="292.0" layoutY="88.0" text="27/04" textFill="#fff3f3" />
-            <Label layoutX="56.0" layoutY="79.0" />
-         </children>
-      </AnchorPane>
-      <AnchorPane id="cardTransferencia2" fx:id="valorSacadoAumonte" layoutX="269.0" layoutY="501.0" prefHeight="128.0" prefWidth="355.0">
-         <styleClass>
-            <String fx:value="button-extrato-card" />
-            <String fx:value="card-extrato-acoes" />
-         </styleClass>
-         <children>
-            <Label id="saqueRealizado1" fx:id="saqueRealizado1" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="118.0" text="Saque realizado-" textFill="#eae2e2">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label id="nomeAurorasaque" fx:id="nomeAuroraSaque" layoutX="132.0" layoutY="19.0" text="Aurora Aumonte" textFill="#fff8f8" />
-            <Label id="numeroContaAumonte" fx:id="nomeAuroraConta" layoutX="14.0" layoutY="41.0" text="Aumonte/02" textFill="#fff6f6" />
-            <Label fx:id="valorSacadoAumontemoney" layoutX="278.0" layoutY="19.0" text="R$ 590, 95" textFill="#fffafa">
-               <styleClass>
-                  <String fx:value="texto-pixrecebido" />
-                  <String fx:value="texto-transferencia" />
-               </styleClass>
-            </Label>
-            <Label fx:id="dateSaqueAumonte" layoutX="292.0" layoutY="88.0" text="31/03" textFill="#fff3f3" />
-            <Label layoutX="56.0" layoutY="79.0" />
-         </children>
-      </AnchorPane>
-      <AnchorPane id="cardPixRecebido2" fx:id="valorRecebidoNovaescard" layoutX="673.0" layoutY="501.0" prefHeight="128.0" prefWidth="355.0">
-         <styleClass>
-            <String fx:value="button-extrato-card" />
-            <String fx:value="card-extrato-acoes" />
-         </styleClass>
-         <children>
-            <Label id="nomePixRecebido2" fx:id="saqueRealizado2" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="95.0" text="Pix recebido-" textFill="#eae2e2">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label id="nomeSilviaPix" fx:id="nomeSilviaPixRecebido" layoutX="109.0" layoutY="19.0" text="Silvia Novaes" textFill="#fff8f8" />
-            <Label id="numeroContaNovaes" fx:id="nomeNovaesConta" layoutX="14.0" layoutY="41.0" text="Novaes/07" textFill="#fff6f6" />
-            <Label fx:id="valorRecebidoNovaes" layoutX="278.0" layoutY="19.0" styleClass="texto-pixrecebido" text="R$ 2, 250.0" textFill="#fffafa" />
-            <Label fx:id="datePixNovaes" layoutX="292.0" layoutY="88.0" text="22/03" textFill="#fff3f3" />
-            <Label layoutX="56.0" layoutY="79.0" />
-         </children>
-      </AnchorPane>
-      <AnchorPane id="cardTransferencia1" fx:id="valorSacadoLopesCard" layoutX="673.0" layoutY="357.0" prefHeight="128.0" prefWidth="355.0">
-         <styleClass>
-            <String fx:value="button-extrato-card" />
-            <String fx:value="card-extrato-acoes" />
-         </styleClass>
-         <children>
-            <Label id="saqueRealizado2" fx:id="pixRecebido2" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="118.0" text="Saque realizado-" textFill="#eae2e2">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <Label id="nomeFelipesaque" fx:id="nomeFelipeSaque" layoutX="132.0" layoutY="19.0" text="Felipe Lopes" textFill="#fff8f8" />
-            <Label id="numeroContaLopes" fx:id="nomeFelipeConta" layoutX="14.0" layoutY="41.0" text="Lopes/08" textFill="#fff6f6" />
-            <Label fx:id="valorSacadoLopes" layoutX="278.0" layoutY="19.0" text="R$80, 00" textFill="#fffafa">
-               <styleClass>
-                  <String fx:value="texto-pixrecebido" />
-                  <String fx:value="texto-transferencia" />
-               </styleClass>
-            </Label>
-            <Label fx:id="dateSaqueLopes" layoutX="292.0" layoutY="88.0" text="14/04" textFill="#fff3f3" />
-            <Label layoutX="56.0" layoutY="79.0" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="quarentaecincodiasExtrato" layoutX="867.0" layoutY="111.0" prefHeight="30.0" prefWidth="132.0" styleClass="icones-extrato">
-         <children>
-            <Label layoutX="45.0" layoutY="5.0" text="45 dias" textFill="#fffcfc">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
       <VBox prefHeight="700.0" prefWidth="240.0" spacing="22.0" styleClass="box-left" stylesheets="@../../../css/style.css">
          <children>
             <Label graphicTextGap="10.0" text="Velvet Bank" textFill="WHITE">
@@ -178,7 +60,7 @@
                </graphic>
             </Label>
             <Label text="Seu futuro. nossa prioridade" textFill="WHITE" />
-            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-inicio" stylesheets="@../../../css/style.css" text="Início">
+            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#tela_Inicial" prefHeight="44.0" prefWidth="208.0" styleClass="button-inicio" stylesheets="@../../../css/style.css" text="Início">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -187,7 +69,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnSaque" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-saque" stylesheets="@../../../css/style.css" text="Saque">
+            <Button fx:id="btnSaque" graphicTextGap="10.0" mnemonicParsing="false" onAction="#telaSaque" prefHeight="44.0" prefWidth="208.0" styleClass="button-saque" stylesheets="@../../../css/style.css" text="Saque">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -196,7 +78,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnDeposito" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-deposito" stylesheets="@../../../css/style.css" text="Depósito">
+            <Button fx:id="btnDeposito" graphicTextGap="10.0" mnemonicParsing="false" onAction="#telaDeposito" prefHeight="44.0" prefWidth="208.0" styleClass="button-deposito" stylesheets="@../../../css/style.css" text="Depósito">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -205,7 +87,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnTransferencia" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-transferencia" stylesheets="@../../../css/style.css" text="Transferência">
+            <Button fx:id="btnTransferencia" graphicTextGap="10.0" mnemonicParsing="false" onAction="#telaTransferencia" prefHeight="44.0" prefWidth="208.0" styleClass="button-transferencia" stylesheets="@../../../css/style.css" text="Transferência">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -214,7 +96,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="hoverExtrato" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="button-extrato" stylesheets="@../../../css/style.css" text="Extrato">
+            <Button fx:id="hoverExtrato" graphicTextGap="10.0" mnemonicParsing="false" onAction="#telaExtrato" prefHeight="44.0" prefWidth="208.0" styleClass="button-extrato" stylesheets="@../../../css/style.css" text="Extrato">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>

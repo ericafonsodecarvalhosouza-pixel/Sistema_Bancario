@@ -243,6 +243,7 @@ public class CadastroController {
 
             GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
 
+
         }catch(loginInvalidoexception e){
             mostrarErro(e.getMessage());
         }

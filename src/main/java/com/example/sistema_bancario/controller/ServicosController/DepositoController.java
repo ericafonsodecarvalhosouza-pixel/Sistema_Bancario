@@ -1,13 +1,17 @@
 package com.example.sistema_bancario.controller.ServicosController;
 
+import com.example.sistema_bancario.controller.utils.GerenciadorTelas;
 import com.example.sistema_bancario.domínios.Banco;
 import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.exceptions.saldoInsuficienteException;
 import com.example.sistema_bancario.exceptions.valorInvalidoException;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+
+import java.io.IOException;
 
 public class DepositoController {
 
@@ -27,7 +31,7 @@ public class DepositoController {
     }
 
     @FXML
-    private void confirmarDeposito(){
+    private void confirmarDeposito(ActionEvent event ) throws IOException {
         try {
             double valor = Double.parseDouble(txtDigitarValorDeposito.getText());
             conta.depositar(valor);
@@ -41,6 +45,10 @@ public class DepositoController {
             alert.showAndWait();
 
             txtDigitarValorDeposito.clear();
+
+            GerenciadorTelas.trocarTela(event, "/com/exemple/sistemas_bancario_tela_Inicial.fxml");
+
+
         }catch (valorInvalidoException ex){
             alertaDeErro(ex.getMessage());
 

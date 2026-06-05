@@ -16,4 +16,5 @@ public class GerenciadorTelas {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
 }

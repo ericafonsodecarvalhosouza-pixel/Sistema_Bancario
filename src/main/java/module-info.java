@@ -2,6 +2,7 @@ module com.example.sistema_bancario {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.example.sistema_bancario;
+    requires java.desktop;
 
 
     opens com.example.sistema_bancario to javafx.fxml;
