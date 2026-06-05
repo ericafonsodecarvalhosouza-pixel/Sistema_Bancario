@@ -1,0 +1,102 @@
+.root {
+    -fx-background-color: black;
+}
+
+/* FUNDO */
+.transfer-page {
+    -fx-background-color: black;
+}
+
+/* TÍTULO */
+.transfer-title {
+    -fx-text-fill: white;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+}
+
+.transfer-subtitle {
+    -fx-text-fill: #39ff9f;
+    -fx-font-size: 16px;
+}
+
+/* CARD SALDO */
+.transfer-balance-card {
+    -fx-background-color: #4a0711;
+    -fx-background-radius: 12;
+}
+
+.transfer-balance-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.transfer-balance-value {
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.transfer-account-box {
+    -fx-background-color: rgba(0,0,0,0.35);
+    -fx-background-radius: 8;
+    -fx-alignment: center;
+}
+
+/* FORMULÁRIO */
+.transfer-form {
+    -fx-background-color: #343434;
+    -fx-background-radius: 10;
+}
+
+.transfer-form-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.transfer-form-subtitle {
+    -fx-text-fill: #c5c5c5;
+    -fx-font-size: 13px;
+}
+
+.transfer-form-label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* CAMPOS */
+.transfer-input-box {
+    -fx-background-color: black;
+    -fx-background-radius: 6;
+}
+
+.transfer-prefix {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.transfer-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #8d8d8d;
+    -fx-font-size: 18px;
+}
+
+/* BOTÃO */
+.transfer-button {
+    -fx-background-color: #5a0b18;
+    -fx-background-radius: 6;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.transfer-button:hover {
+    -fx-background-color: #6f1020;
+}
+
+.transfer-button:pressed {
+    -fx-background-color: #430815;
+}
