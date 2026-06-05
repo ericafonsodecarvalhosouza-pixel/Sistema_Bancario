@@ -1,0 +1,77 @@
+.root {
+    -fx-background-color: black;
+}
+
+/* FUNDO */
+.extract-page {
+    -fx-background-color: black;
+}
+
+/* MENU LATERAL */
+.sidebar {
+    -fx-background-color: #2a0008;
+    -fx-padding: 28 16 28 16;
+    -fx-spacing: 22;
+}
+
+.bank-title {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.bank-subtitle {
+    -fx-text-fill: #c7a6aa;
+    -fx-font-size: 12px;
+}
+
+.menu-button-active {
+    -fx-background-color: #5a0b18;
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-alignment: center-left;
+    -fx-padding: 0 0 0 20;
+}
+
+/* TÍTULO */
+.extract-title {
+    -fx-text-fill: white;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+}
+
+.extract-subtitle {
+    -fx-text-fill: #39ff9f;
+    -fx-font-size: 16px;
+}
+
+/* CARD SALDO */
+.extract-card {
+    -fx-background-color: #4a0711;
+    -fx-background-radius: 12;
+}
+
+.extract-label {
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+
+.extract-value {
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+/* BOTÃO */
+.extract-button {
+    -fx-background-color: #5a0b18;
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.extract-button:hover {
+    -fx-background-color: #6f1020;
+}

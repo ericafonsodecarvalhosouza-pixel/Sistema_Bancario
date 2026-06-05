@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -10,42 +9,33 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="fundoExtrato" fx:id="valorRecebidoSilva" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controller.ServicosController.ExtratoController">
+<AnchorPane id="fundoExtrato" fx:id="valorRecebidoSilva" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/tela_inicio.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controller.ServicosController.ExtratoController">
    <children>
-      <Label fx:id="tituloExtrato" layoutX="599.0" layoutY="14.0" text="Extrato" textFill="WHITE">
+      <Label fx:id="tituloExtrato" layoutX="275.0" layoutY="25.0" styleClass="extract-title" stylesheets="@../../../css/extrato.css" text="Extrato" textFill="WHITE">
          <font>
             <Font name="Webdings" size="48.0" />
          </font>
       </Label>
-      <AnchorPane fx:id="cardSaldoAtual" layoutX="443.0" layoutY="143.0" prefHeight="114.0" prefWidth="394.0">
+      <AnchorPane fx:id="cardSaldoAtual" layoutX="275.0" layoutY="141.0" prefHeight="125.0" prefWidth="965.0" styleClass="extract-card" stylesheets="@../../../css/extrato.css">
          <children>
-            <Label fx:id="saldoatualTexto" layoutX="19.0" layoutY="14.0" text="Saldo Atual:" textFill="#fcf9f9">
+            <Label fx:id="saldoatualTexto" layoutX="19.0" layoutY="23.0" styleClass="extract-label" stylesheets="@../../../css/extrato.css" text="Saldo disponível" textFill="#fcf9f9">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <Label fx:id="saldoAtualValor" layoutX="19.0" layoutY="65.0" text="R$ 5.530,88" textFill="#f2eded">
+            <Label fx:id="saldoAtualValor" layoutX="19.0" layoutY="54.0" styleClass="extract-value" stylesheets="@../../../css/extrato.css" text="R$ 5.530,88" textFill="#f2eded">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <Label layoutX="347.0" layoutY="14.0" text="X" textFill="WHITE">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
          </children>
-         <styleClass>
-            <String fx:value="saldo-ver" />
-            <String fx:value="card-extrato" />
-         </styleClass>
       </AnchorPane>
-      <Button fx:id="btnExtrato" layoutX="581.0" layoutY="416.0" mnemonicParsing="false" onAction="#gerarextrato" prefHeight="50.0" prefWidth="141.0" styleClass="button-extrato-card" text="Gerar Extrato">
+      <Button fx:id="btnExtrato" layoutX="594.0" layoutY="328.0" mnemonicParsing="false" onAction="#gerarextrato" prefHeight="45.0" prefWidth="260.0" styleClass="extract-button" stylesheets="@../../../css/extrato.css" text="Gerar Extrato">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <VBox prefHeight="700.0" prefWidth="240.0" spacing="22.0" styleClass="box-left" stylesheets="@../../../css/style.css">
+      <VBox prefHeight="700.0" prefWidth="240.0" spacing="22.0" styleClass="sidebar" stylesheets="@../../../css/extrato.css">
          <children>
             <Label graphicTextGap="10.0" text="Velvet Bank" textFill="WHITE">
                <font>
@@ -60,47 +50,11 @@
                </graphic>
             </Label>
             <Label text="Seu futuro. nossa prioridade" textFill="WHITE" />
-            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#tela_Inicial" prefHeight="44.0" prefWidth="208.0" styleClass="button-inicio" stylesheets="@../../../css/style.css" text="Início">
+            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#tela_Inicial" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@imagens/wallet.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="btnSaque" graphicTextGap="10.0" mnemonicParsing="false" onAction="#telaSaque" prefHeight="44.0" prefWidth="208.0" styleClass="button-saque" stylesheets="@../../../css/style.css" text="Saque">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/circle_arrow_up.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="btnDeposito" graphicTextGap="10.0" mnemonicParsing="false" onAction="#telaDeposito" prefHeight="44.0" prefWidth="208.0" styleClass="button-deposito" stylesheets="@../../../css/style.css" text="Depósito">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/circle_arrow_down.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="btnTransferencia" graphicTextGap="10.0" mnemonicParsing="false" onAction="#telaTransferencia" prefHeight="44.0" prefWidth="208.0" styleClass="button-transferencia" stylesheets="@../../../css/style.css" text="Transferência">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/arrow_left_right.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="hoverExtrato" graphicTextGap="10.0" mnemonicParsing="false" onAction="#telaExtrato" prefHeight="44.0" prefWidth="208.0" styleClass="button-extrato" stylesheets="@../../../css/style.css" text="Extrato">
-               <graphic>
-                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@imagens/file_text.png" />
+                        <Image url="@imagens/circle_arrow_left.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -110,5 +64,6 @@
             <Insets bottom="24.0" left="16.0" right="16.0" top="24.0" />
          </padding>
       </VBox>
+      <Label layoutX="275.0" layoutY="86.0" styleClass="extract-subtitle" stylesheets="@../../../css/extrato.css" text="Veja os extratos da sua conta" />
    </children>
 </AnchorPane>

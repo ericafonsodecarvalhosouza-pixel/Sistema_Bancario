@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-background-color: #000000;" styleClass="root" stylesheets="@../../../css/tela_inicio.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controller.ServicosController.DepositoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/tela_inicio.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controller.ServicosController.DepositoController">
    <left>
       <VBox prefHeight="700.0" prefWidth="240.0" spacing="22.0" styleClass="sidebar" stylesheets="@../../../css/tela_inicio.css" BorderPane.alignment="CENTER">
          <children>
@@ -45,25 +45,25 @@
       </VBox>
    </left>
    <center>
-      <ScrollPane fitToWidth="true" pannable="true" prefHeight="700.0" prefWidth="1040.0" styleClass="main-scroll" stylesheets="@../../../css/tela_inicio.css" BorderPane.alignment="CENTER">
+      <ScrollPane fitToWidth="true" pannable="true" prefHeight="700.0" prefWidth="1040.0" style="-fx-background-color: black;" styleClass="main-scroll" stylesheets="@../../../css/tela_inicio.css" BorderPane.alignment="CENTER">
          <content>
             <VBox minHeight="700.0" prefWidth="980.0" spacing="22.0" styleClass="deposit-page" stylesheets="@../../../css/deposito.css">
                <padding>
                   <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                </padding>
                <children>
-                  <Label styleClass="deposit-title" stylesheets="@../../../css/deposito.css" text="Depósito" textFill="WHITE">
+                  <Label fx:id="tituloSaque" styleClass="withdraw-title" stylesheets="@../../../css/saque.css" text="Saque" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Label styleClass="deposit-subtitle" stylesheets="@../../../css/deposito.css" text="Adicione fundos à sua conta" textFill="WHITE" />
-                  <AnchorPane prefHeight="115.0" prefWidth="620.0" styleClass="balance-card" stylesheets="@../../../css/deposito.css">
+                  <Label styleClass="withdraw-subtitle" stylesheets="@../../../css/saque.css" text="Seu saque seguro" textFill="WHITE" />
+                  <AnchorPane prefHeight="115.0" prefWidth="620.0" styleClass="withdraw-balance-card" stylesheets="@../../../css/saque.css">
                      <children>
                         <VBox layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>
-                              <Label layoutX="32.0" layoutY="25.0" styleClass="balance-label" stylesheets="@../../../css/deposito.css" text="Saldo disponível" textFill="WHITE" />
-                              <Label fx:id="lblValorDisponivel" layoutX="32.0" layoutY="55.0" prefHeight="50.0" prefWidth="187.0" styleClass="balance-value" stylesheets="@../../../css/deposito.css" text="R$ 5.430,75" textFill="WHITE">
+                              <Label fx:id="valorDisponivelTexto" layoutX="32.0" layoutY="25.0" styleClass="withdraw-balance-label" stylesheets="@../../../css/saque.css" text="Saldo disponível" textFill="WHITE" />
+                              <Label fx:id="valorDisponivel" layoutX="32.0" layoutY="55.0" prefHeight="50.0" prefWidth="187.0" styleClass="withdraw-balance-value" stylesheets="@../../../css/saque.css" text="R$ 5.430,75" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
@@ -71,7 +71,7 @@
                               <HBox prefHeight="100.0" prefWidth="200.0" spacing="12.0" />
                            </children>
                         </VBox>
-                        <VBox layoutX="820.0" layoutY="30.0" prefHeight="55.0" prefWidth="105.0" spacing="1.0" styleClass="account-box" stylesheets="@../../../css/deposito.css">
+                        <VBox layoutX="820.0" layoutY="30.0" prefHeight="55.0" prefWidth="105.0" spacing="1.0" styleClass="withdraw-account-box" stylesheets="@../../../css/saque.css">
                            <children>
                               <Label text="Conta Corrente" textFill="WHITE" />
                            </children>
@@ -81,35 +81,35 @@
                         </VBox>
                      </children>
                   </AnchorPane>
-                  <VBox prefHeight="250.0" prefWidth="965.0" spacing="16.0" styleClass="deposit-form" stylesheets="@../../../css/deposito.css">
+                  <VBox prefHeight="250.0" prefWidth="965.0" spacing="16.0" styleClass="withdraw-form" stylesheets="@../../../css/saque.css">
                      <padding>
                         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                      </padding>
                      <children>
-                        <Label styleClass="form-title" stylesheets="@../../../css/deposito.css" text="PIX para depósito" textFill="WHITE">
+                        <Label styleClass="withdraw-form-title" stylesheets="@../../../css/saque.css" text="Retirada" textFill="WHITE">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
                         </Label>
-                        <Label styleClass="form-subtitle" stylesheets="@../../../css/deposito.css" text="Digite o valor que deseja adicionar à conta." textFill="WHITE">
+                        <Label styleClass="withdraw-form-subtitle" stylesheets="@../../../css/saque.css" text="Digite o valor que deseja sacar de sua conta." textFill="WHITE">
                            <font>
                               <Font size="13.0" />
                            </font>
                         </Label>
-                        <Label styleClass="form-label" stylesheets="@../../../css/deposito.css" text="Valor" textFill="WHITE" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="905.0" spacing="12.0" styleClass="value-box" stylesheets="@../../../css/deposito.css">
+                        <Label fx:id="labelValorSaque" styleClass="withdraw-form-label" stylesheets="@../../../css/saque.css" text="Valor" textFill="WHITE" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="905.0" spacing="12.0" styleClass="withdraw-value-box" stylesheets="@../../../css/saque.css">
                            <children>
                               <Label text="R$" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font></Label>
-                              <TextField fx:id="txtDigitarValorDeposito" prefHeight="45.0" prefWidth="780.0" promptText="0.00" styleClass="deposit-field" stylesheets="@../../../css/deposito.css" />
+                              <TextField fx:id="digitarValorSaque" prefHeight="45.0" prefWidth="780.0" promptText="0.00" styleClass="withdraw-field" stylesheets="@../../../css/saque.css" />
                            </children>
                            <padding>
                               <Insets left="16.0" right="16.0" />
                            </padding>
                         </HBox>
-                        <Button fx:id="btnDepositarPix" mnemonicParsing="false" onAction="#confirmarDeposito" prefHeight="50.0" prefWidth="905.0" styleClass="deposit-button" stylesheets="@../../../css/deposito.css" text="Depositar via PIX" />
+                        <Button fx:id="btnConfirmarSaque" mnemonicParsing="false" onAction="#confirmarDeposito" prefHeight="50.0" prefWidth="905.0" styleClass="withdraw-button" stylesheets="@../../../css/saque.css" text="Sacar" />
                      </children>
                   </VBox>
                </children>
