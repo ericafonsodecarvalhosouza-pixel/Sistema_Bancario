@@ -3,6 +3,11 @@ module com.example.sistema_bancario {
     requires javafx.fxml;
 
     requires java.desktop;
+    requires javafx.base;
+
+    opens com.example.sistema_bancario to javafx.fxml;
+
+
 
     exports com.example.sistema_bancario.controller;
     opens com.example.sistema_bancario.controller to javafx.fxml;
@@ -12,5 +17,4 @@ module com.example.sistema_bancario {
     opens com.example.sistema_bancario.controller.ServicosController to javafx.fxml;
     exports com.example.sistema_bancario.controller.LoginECadastroControllers;
     opens com.example.sistema_bancario.controller.LoginECadastroControllers to javafx.fxml;
-
 }

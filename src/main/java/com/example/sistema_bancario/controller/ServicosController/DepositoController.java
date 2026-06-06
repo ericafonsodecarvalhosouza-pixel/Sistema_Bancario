@@ -15,69 +15,66 @@ import java.io.IOException;
 
 public class DepositoController {
 
-    @FXML
-    private TextField txtDigitarValorDeposito;
 
-    @FXML
-    private Label lblValorDisponivel;
+        @FXML
+        private TextField txtDigitarValorDeposito;
 
-
-    private Conta conta;
+        @FXML
+        private Label lblValorDisponivel;
 
 
-    public void setConta(Conta conta){
-        this.conta = conta;
-        atualizarSaldo();
-    }
 
-    @FXML
-    private void confirmarDeposito(ActionEvent event ) throws IOException {
-        try {
-            double valor = Double.parseDouble(txtDigitarValorDeposito.getText());
-            conta.depositar(valor);
+
+
+        public void setConta(Conta conta){
             atualizarSaldo();
+        }
+
+        @FXML
+        private void confirmarDeposito(ActionEvent event ) throws IOException {
+            try {
+                Conta conta = Banco.contaLogada;
+                double valor = Double.parseDouble(txtDigitarValorDeposito.getText());
+                conta.depositar(valor);
+                atualizarSaldo();
 
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Depósito");
-            alert.setTitle("Sucesso!");
-            alert.setContentText("Seu depósito foi realizado com sucesso!");
-            alert.showAndWait();
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Depósito");
+                alert.setTitle("Sucesso!");
+                alert.setContentText("Seu depósito foi realizado com sucesso!");
+                alert.showAndWait();
 
-            txtDigitarValorDeposito.clear();
+                txtDigitarValorDeposito.clear();
 
-            GerenciadorTelas.trocarTela(event, "/com/exemple/sistemas_bancario_tela_Inicial.fxml");
+                GerenciadorTelas.trocarTela(event, "/com/exemple/sistemas_bancario_tela_Inicial.fxml");
 
 
-        }catch (valorInvalidoException ex){
-            alertaDeErro(ex.getMessage());
+            }catch (valorInvalidoException ex){
+                alertaDeErro(ex.getMessage());
 
-        }catch (saldoInsuficienteException ex){
-            alertaDeErro(ex.getMessage());
+            }catch (saldoInsuficienteException ex){
+                alertaDeErro(ex.getMessage());
 
-        }catch (NumberFormatException ex){
-            alertaDeErro("Digite um valor númerico válido!");
+            }catch (NumberFormatException ex){
+                alertaDeErro("Digite um valor númerico válido!");
+            }
+        }
+
+
+        private void alertaDeErro(String msg){
+            Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+            alerta.setTitle("Erro");
+            alerta.setHeaderText("");
+            alerta.setContentText(msg);
+            alerta.showAndWait();
+
+        }
+        private void atualizarSaldo(){
+                Conta conta = Banco.contaLogada;
+                if(conta != null){
+                    lblValorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
+            }
         }
     }
-
-
-    private void alertaDeErro(String msg){
-        Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-        alerta.setTitle("Erro");
-        alerta.setHeaderText("");
-        alerta.setContentText(msg);
-        alerta.showAndWait();
-
-    }
-    private void atualizarSaldo(){
-
-        conta = Banco.contaLogada;
-
-        if(conta != null){
-            lblValorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
-        }
-    }
-}
-
-
 
