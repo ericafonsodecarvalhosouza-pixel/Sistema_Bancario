@@ -20,19 +20,16 @@ public class SaqueController {
     private TextField digitarValorSaque;
 
     @FXML
-    private Label valorDisponivel;
+    private Label lblValorDisponivel;
 
     private Conta conta;
 
-    public void setConta(Conta conta){
-        this.conta = conta;
-        atualizarSaldo();
-    }
 
 
     @FXML
     private void confiarmarSaque(ActionEvent event )throws IOException {
         try {
+            Conta conta = Banco.contaLogada;
             double valor = Double.parseDouble(digitarValorSaque.getText());
             conta.sacar(valor);
             atualizarSaldo();
@@ -68,11 +65,9 @@ public class SaqueController {
 
     }
     private void atualizarSaldo(){
-
-        conta = Banco.contaLogada;
-
+        Conta conta = Banco.contaLogada;
         if(conta != null){
-            valorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
+            lblValorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
         }
     }
 }

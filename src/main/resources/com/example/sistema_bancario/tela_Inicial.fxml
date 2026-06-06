@@ -94,7 +94,7 @@
                         <VBox layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>
                               <Label styleClass="banco-subtitulo" stylesheets="@../../../css/tela_inicio.css" text="Saldo disponível" textFill="WHITE" />
-                              <Label prefHeight="50.0" prefWidth="187.0" styleClass="balance-value" stylesheets="@../../../css/tela_inicio.css" text="R$ 5.430,75" textFill="WHITE">
+                              <Label fx:id="lblValorDisponivel" prefHeight="50.0" prefWidth="187.0" styleClass="balance-value" stylesheets="@../../../css/tela_inicio.css" text="R$ 5.430,75" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>

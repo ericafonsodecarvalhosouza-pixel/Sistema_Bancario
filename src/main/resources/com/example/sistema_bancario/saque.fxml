@@ -63,7 +63,7 @@
                         <VBox layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>
                               <Label fx:id="valorDisponivelTexto" layoutX="32.0" layoutY="25.0" styleClass="withdraw-balance-label" stylesheets="@../../../css/saque.css" text="Saldo disponível" textFill="WHITE" />
-                              <Label fx:id="valorDisponivel" layoutX="32.0" layoutY="55.0" prefHeight="50.0" prefWidth="187.0" styleClass="withdraw-balance-value" stylesheets="@../../../css/saque.css" text="R$ 5.430,75" textFill="WHITE">
+                              <Label fx:id="lblValorDisponivel" layoutX="32.0" layoutY="55.0" prefHeight="50.0" prefWidth="187.0" styleClass="withdraw-balance-value" stylesheets="@../../../css/saque.css" text="R$ 5.430,75" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
