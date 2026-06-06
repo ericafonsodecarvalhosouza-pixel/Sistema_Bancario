@@ -1,6 +1,7 @@
 package com.example.sistema_bancario.controller.ServicosController;
 
 import com.example.sistema_bancario.controller.utils.GerenciadorTelas;
+import com.example.sistema_bancario.domínios.Banco;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,6 +14,9 @@ public class TelaInicialController {
 
     @FXML
     private Button btnDeposito;
+
+    @FXML
+    private Button btninicio0;
 
     @FXML
     private Button btnExtrato;
@@ -32,22 +36,28 @@ public class TelaInicialController {
 
     @FXML
     void teladedeposito(ActionEvent event) throws IOException {
-        GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/controller/ServicosController/DepositoController");
+        GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/deposito.fxml");
     }
 
     @FXML
     void teladeextrato(ActionEvent event) throws IOException {
-        GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/controller/ServicosController/ExtratoController");
+        GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/Extrato.fxml");
     }
 
     @FXML
     void teladesaque(ActionEvent event) throws IOException {
-        GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/controller/ServicosController/SaqueController");
+        GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/saque.fxml");
     }
 
     @FXML
     void teladetransferencia(ActionEvent event) throws IOException {
-        GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/controller/ServicosController/TransferenciaController");
+        GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/transferencia.fxml");
+    }
+
+    @FXML
+    void teladelogin(ActionEvent event) throws IOException {
+        Banco.logout();
+        GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/login.fxml");
     }
 
 }

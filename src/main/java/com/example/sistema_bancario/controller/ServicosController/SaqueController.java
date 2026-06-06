@@ -22,8 +22,11 @@ public class SaqueController {
     @FXML
     private Label lblValorDisponivel;
 
-    private Conta conta;
-
+    @FXML
+    private void initialize(){
+        Conta conta = Banco.getContaLogada();
+        atualizarSaldo();
+    }
 
 
     @FXML
@@ -65,9 +68,14 @@ public class SaqueController {
 
     }
     private void atualizarSaldo(){
-        Conta conta = Banco.contaLogada;
+        Conta conta = Banco.getContaLogada();
         if(conta != null){
             lblValorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
         }
+    }
+
+    @FXML
+    public void voltarParaInicio1(ActionEvent event) throws IOException{
+        GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
     }
 }
