@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/tela_inicio.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controller.ServicosController.DepositoController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" styleClass="root" stylesheets="@../../../css/tela_inicio.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistema_bancario.controller.ServicosController.SaqueController">
    <left>
       <VBox prefHeight="700.0" prefWidth="240.0" spacing="22.0" styleClass="sidebar" stylesheets="@../../../css/tela_inicio.css" BorderPane.alignment="CENTER">
          <children>
@@ -30,7 +30,7 @@
                </graphic>
             </Label>
             <Label text="Seu futuro. nossa prioridade" textFill="WHITE" />
-            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
+            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnVoltar" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -109,7 +109,7 @@
                               <Insets left="16.0" right="16.0" />
                            </padding>
                         </HBox>
-                        <Button fx:id="btnConfirmarSaque" mnemonicParsing="false" onAction="#confirmarDeposito" prefHeight="50.0" prefWidth="905.0" styleClass="withdraw-button" stylesheets="@../../../css/saque.css" text="Sacar" />
+                        <Button fx:id="btnConfirmarSaque" mnemonicParsing="false" onAction="#confirmarSaque" prefHeight="50.0" prefWidth="905.0" styleClass="withdraw-button" stylesheets="@../../../css/saque.css" text="Sacar" />
                      </children>
                   </VBox>
                </children>

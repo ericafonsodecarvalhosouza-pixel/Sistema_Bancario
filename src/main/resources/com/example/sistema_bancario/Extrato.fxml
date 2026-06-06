@@ -30,7 +30,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="btnExtrato" layoutX="594.0" layoutY="328.0" mnemonicParsing="false" onAction="#gerarextrato" prefHeight="45.0" prefWidth="260.0" styleClass="extract-button" stylesheets="@../../../css/extrato.css" text="Gerar Extrato">
+      <Button fx:id="btnExtrato" layoutX="594.0" layoutY="328.0" mnemonicParsing="false" onAction="#gerarExtrato" prefHeight="45.0" prefWidth="260.0" styleClass="extract-button" stylesheets="@../../../css/extrato.css" text="Gerar Extrato">
          <font>
             <Font size="18.0" />
          </font>

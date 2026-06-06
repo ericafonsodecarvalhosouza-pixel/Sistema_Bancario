@@ -31,6 +31,15 @@ public class DepositoController {
     }
 
     @FXML
+    private void btnVoltar(ActionEvent event) throws IOException {
+
+        GerenciadorTelas.trocarTela(
+                event,
+                "/com/example/sistema_bancario/tela_Inicial.fxml"
+        );
+    }
+
+    @FXML
     private void confirmarDeposito(ActionEvent event ) throws IOException {
         try {
             double valor = Double.parseDouble(txtDigitarValorDeposito.getText());
@@ -46,7 +55,7 @@ public class DepositoController {
 
             txtDigitarValorDeposito.clear();
 
-            GerenciadorTelas.trocarTela(event, "/com/exemple/sistemas_bancario_tela_Inicial.fxml");
+            GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
 
 
         }catch (valorInvalidoException ex){

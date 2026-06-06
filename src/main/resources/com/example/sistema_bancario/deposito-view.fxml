@@ -30,7 +30,7 @@
                </graphic>
             </Label>
             <Label text="Seu futuro. nossa prioridade" textFill="WHITE" />
-            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
+            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnVoltar" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -60,7 +60,7 @@
                   <Label styleClass="deposit-subtitle" stylesheets="@../../../css/deposito.css" text="Adicione fundos à sua conta" textFill="WHITE" />
                   <AnchorPane prefHeight="115.0" prefWidth="620.0" styleClass="balance-card" stylesheets="@../../../css/deposito.css">
                      <children>
-                        <VBox layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+                        <VBox fx:id="cardSaldoAtualDisponivel" layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>
                               <Label layoutX="32.0" layoutY="25.0" styleClass="balance-label" stylesheets="@../../../css/deposito.css" text="Saldo disponível" textFill="WHITE" />
                               <Label fx:id="lblValorDisponivel" layoutX="32.0" layoutY="55.0" prefHeight="50.0" prefWidth="187.0" styleClass="balance-value" stylesheets="@../../../css/deposito.css" text="R$ 5.430,75" textFill="WHITE">
@@ -81,7 +81,7 @@
                         </VBox>
                      </children>
                   </AnchorPane>
-                  <VBox prefHeight="250.0" prefWidth="965.0" spacing="16.0" styleClass="deposit-form" stylesheets="@../../../css/deposito.css">
+                  <VBox fx:id="cardDadosDeDeposito" prefHeight="250.0" prefWidth="965.0" spacing="16.0" styleClass="deposit-form" stylesheets="@../../../css/deposito.css">
                      <padding>
                         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                      </padding>
