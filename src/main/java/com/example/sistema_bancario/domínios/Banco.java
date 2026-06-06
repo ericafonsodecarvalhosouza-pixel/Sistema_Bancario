@@ -54,4 +54,16 @@ public class Banco {
 
         return null;
     }
+
+    public static Conta getContaLogada() {
+        return contaLogada;
+    }
+
+    public static void setContaLogada(Conta contaLogada) {
+        Banco.contaLogada = contaLogada;
+    }
+
+    public static void logout(){
+        contaLogada = null;
+    }
 }

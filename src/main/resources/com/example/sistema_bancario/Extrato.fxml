@@ -16,14 +16,14 @@
             <Font name="Webdings" size="48.0" />
          </font>
       </Label>
-      <AnchorPane fx:id="cardSaldoAtual" layoutX="275.0" layoutY="141.0" prefHeight="125.0" prefWidth="965.0" styleClass="extract-card" stylesheets="@../../../css/extrato.css">
+      <AnchorPane layoutX="275.0" layoutY="141.0" prefHeight="125.0" prefWidth="965.0" styleClass="extract-card" stylesheets="@../../../css/extrato.css">
          <children>
             <Label fx:id="saldoatualTexto" layoutX="19.0" layoutY="23.0" styleClass="extract-label" stylesheets="@../../../css/extrato.css" text="Saldo disponível" textFill="#fcf9f9">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <Label fx:id="saldoAtualValor" layoutX="19.0" layoutY="54.0" styleClass="extract-value" stylesheets="@../../../css/extrato.css" text="R$ 5.530,88" textFill="#f2eded">
+            <Label fx:id="lblValorDisponivel" layoutX="19.0" layoutY="54.0" styleClass="extract-value" stylesheets="@../../../css/extrato.css" text="R$ 5.530,88" textFill="#f2eded">
                <font>
                   <Font size="23.0" />
                </font>

@@ -48,7 +48,8 @@ public class LoginController {
                 .orElse(null);
 
         if (Objects.nonNull(contaEncontrada)) {
-            Banco.contaLogada = contaEncontrada;
+
+            Banco.setContaLogada(contaEncontrada);
 
             GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
 

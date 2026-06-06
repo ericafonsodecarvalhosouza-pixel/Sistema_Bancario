@@ -4,6 +4,9 @@ module com.example.sistema_bancario {
 
     requires java.desktop;
     requires javafx.base;
+    requires kernel;
+    requires layout;
+
 
     opens com.example.sistema_bancario to javafx.fxml;
 
