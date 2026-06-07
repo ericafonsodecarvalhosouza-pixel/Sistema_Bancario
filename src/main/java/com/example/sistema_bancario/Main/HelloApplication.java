@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(
                 HelloApplication.class.getResource(
-                        "/com/example/sistema_bancario/cadastro.fxml"
+                        "/com/example/sistema_bancario/login.fxml"
                 )
         );
 
