@@ -19,6 +19,7 @@ import java.io.IOException;
 public class TransferenciaController {
 
 
+    @FXML
     private Button btnEnviarPix;
 
     @FXML
