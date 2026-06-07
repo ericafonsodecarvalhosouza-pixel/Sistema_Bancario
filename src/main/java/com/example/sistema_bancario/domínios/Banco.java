@@ -18,7 +18,7 @@ public class Banco {
 
         Cliente cliente1 = new Cliente(
                 "João Silva",
-                "joao@gmail.com",
+                "joao.silva@gmail.com",
                 "11111111111",
                 "senha123"
         );
@@ -30,7 +30,7 @@ public class Banco {
 
         Cliente cliente2 = new Cliente(
                 "Maria Souza",
-                "maria@hotmail.com",
+                "maria.souza@hotmail.com",
                 "22222222222",
                 "senha123"
         );

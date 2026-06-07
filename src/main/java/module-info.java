@@ -5,16 +5,12 @@ module com.example.sistema_bancario {
     requires java.desktop;
     requires java.xml.crypto;
 
-    exports com.example.sistema_bancario;
     opens com.example.sistema_bancario to javafx.fxml;
 
     requires javafx.base;
     requires kernel;
     requires layout;
 
-
-    exports com.example.sistema_bancario.controller;
-    opens com.example.sistema_bancario.controller to javafx.fxml;
     exports com.example.sistema_bancario.Main;
     opens com.example.sistema_bancario.Main to javafx.fxml;
     exports com.example.sistema_bancario.controller.ServicosController;
