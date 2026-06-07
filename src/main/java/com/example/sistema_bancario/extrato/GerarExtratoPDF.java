@@ -31,8 +31,6 @@ public class GerarExtratoPDF {
                 String linha = movs.getDataHora() + " - " + movs.getValor() + " - " + movs.getTipomovimentacao() + " - " + movs.getDescricao();
 
                 document.add(new Paragraph(linha));
-
-
             }
 
             document.add(new Paragraph(" "));
@@ -44,10 +42,6 @@ public class GerarExtratoPDF {
         }catch (Exception e){
             e.getCause();
         }
-
-
-
-
     }
 
 }
