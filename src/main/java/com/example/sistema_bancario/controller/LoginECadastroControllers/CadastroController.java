@@ -94,17 +94,17 @@ public class CadastroController {
         }
 
         if (email.isEmpty()) {
-            mostrarErro("Digite seu email.");
+            mostrarErro("Digite seu email:");
             return;
         }
 
         if (cpf.isEmpty()) {
-            mostrarErro("Digite seu CPF.");
+            mostrarErro("Digite seu CPF:");
             return;
         }
 
         if (senha.isEmpty()) {
-            mostrarErro("Digite sua senha.");
+            mostrarErro("Digite sua senha:");
             return;
         }
 
@@ -112,7 +112,7 @@ public class CadastroController {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Aviso");
             alert.setHeaderText(null);
-            alert.setContentText("Selecione um tipo de conta.");
+            alert.setContentText("Selecione um tipo de conta:");
             alert.showAndWait();
             return;
         }
