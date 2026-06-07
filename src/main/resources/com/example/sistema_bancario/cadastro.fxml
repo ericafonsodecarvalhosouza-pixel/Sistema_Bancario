@@ -12,34 +12,34 @@
    <children>
       <AnchorPane fx:id="cardCadastro" layoutX="273.0" layoutY="40.0" prefHeight="620.0" prefWidth="734.0" styleClass="card-cadastro" stylesheets="@../../../css/cadastro.css">
          <children>
-            <Label fx:id="tituloCadastro" layoutX="276.0" layoutY="14.0" text="Cadastro" textFill="#fff9f9">
+            <Label fx:id="textCadastro" layoutX="276.0" layoutY="14.0" text="Cadastro" textFill="#fff9f9">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>
             </Label>
-            <Label fx:id="tituloNome" layoutX="149.0" layoutY="126.0" text="Nome" textFill="#fff3f3">
+            <Label fx:id="nomeText" layoutX="149.0" layoutY="126.0" text="Nome" textFill="#fff3f3">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <Label fx:id="tituloEmail" layoutX="414.0" layoutY="126.0" text="Email" textFill="#f4ecec">
+            <Label fx:id="emailText" layoutX="414.0" layoutY="126.0" text="Email" textFill="#f4ecec">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <TextField id="labelNome" fx:id="labelNome" layoutX="145.0" layoutY="179.0" prefHeight="34.0" prefWidth="189.0" />
-            <TextField fx:id="labelEmail" layoutX="414.0" layoutY="179.0" prefHeight="34.0" prefWidth="199.0" />
-            <Label fx:id="tituloCpf" layoutX="149.0" layoutY="253.0" text="CPF" textFill="#f4ecec">
+            <TextField id="labelNome" fx:id="textFieldNome" layoutX="145.0" layoutY="179.0" prefHeight="34.0" prefWidth="189.0" />
+            <TextField fx:id="textFieldEmail" layoutX="414.0" layoutY="179.0" prefHeight="34.0" prefWidth="199.0" />
+            <Label fx:id="textCpf" layoutX="149.0" layoutY="253.0" text="CPF" textFill="#f4ecec">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
-            <TextField layoutX="414.0" layoutY="313.0" prefHeight="34.0" prefWidth="214.0" />
-            <Label fx:id="tituloSenha" layoutX="410.0" layoutY="236.0" text="Senha" textFill="#f4ecec">
+            <Label fx:id="textSenha" layoutX="410.0" layoutY="236.0" text="Senha" textFill="#f4ecec">
                <font>
                   <Font size="23.0" />
                </font>
             </Label>
+
             <Button fx:id="btnCadastrar" layoutX="321.0" layoutY="531.0" mnemonicParsing="false" onAction="#botaoCadastrar" prefHeight="41.0" prefWidth="91.0" text="Cadastrar" />
             <PasswordField fx:id="labelSenha" layoutX="414.0" layoutY="313.0" prefHeight="34.0" prefWidth="214.0" />
             <TextField fx:id="labelCpf" layoutX="149.0" layoutY="313.0" prefHeight="34.0" prefWidth="199.0" />

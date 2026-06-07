@@ -30,7 +30,11 @@
                </graphic>
             </Label>
             <Label text="Seu futuro. nossa prioridade" textFill="WHITE" />
+<<<<<<< HEAD
+            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnVoltar" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
+=======
             <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#voltarInicio3" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
+>>>>>>> master
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -58,7 +62,7 @@
                      </font>
                   </Label>
                   <Label styleClass="transfer-subtitle" stylesheets="@../../../css/transferencia.css" text="Transação segura" textFill="WHITE" />
-                  <AnchorPane prefHeight="115.0" prefWidth="620.0" styleClass="transfer-balance-card" stylesheets="@../../../css/transferencia.css">
+                  <AnchorPane fx:id="caardReadComValorDisponivel" prefHeight="115.0" prefWidth="620.0" styleClass="transfer-balance-card" stylesheets="@../../../css/transferencia.css">
                      <children>
                         <VBox layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>
@@ -81,7 +85,7 @@
                         </VBox>
                      </children>
                   </AnchorPane>
-                  <VBox prefHeight="250.0" prefWidth="965.0" spacing="16.0" styleClass="transfer-form" stylesheets="@../../../css/transferencia.css">
+                  <VBox fx:id="cardDadosDeTransferencia" prefHeight="250.0" prefWidth="965.0" spacing="16.0" styleClass="transfer-form" stylesheets="@../../../css/transferencia.css">
                      <padding>
                         <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                      </padding>

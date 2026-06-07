@@ -28,9 +28,17 @@ public class SaqueController {
         atualizarSaldo();
     }
 
+    @FXML
+    private void btnVoltar(ActionEvent event) throws IOException {
+
+        GerenciadorTelas.trocarTela(
+                event,
+                "/com/example/sistema_bancario/tela_Inicial.fxml"
+        );
+    }
 
     @FXML
-    private void confiarmarSaque(ActionEvent event )throws IOException {
+    private void confirmarSaque(ActionEvent event )throws IOException {
         try {
             Conta conta = Banco.contaLogada;
             double valor = Double.parseDouble(digitarValorSaque.getText());
@@ -45,7 +53,7 @@ public class SaqueController {
 
             digitarValorSaque.clear();
 
-            GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/tela_Inicial.fxml");
+            GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
 
         }catch (valorInvalidoException ex){
             alertaDeErro(ex.getMessage());
