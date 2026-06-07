@@ -104,57 +104,7 @@
                         </VBox>
                      </children>
                   </AnchorPane>
-                  <Label text="Ações rápidas" textFill="WHITE">
-                     <font>
-                        <Font name="System Bold" size="22.0" />
-                     </font>
-                  </Label>
-                  <HBox alignment="CENTER_LEFT" prefHeight="130.0" prefWidth="920.0" spacing="20.0">
-                     <children>
-                        <VBox fx:id="acaoRapidaSaque" alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="quick-card" stylesheets="@../../../css/tela_inicio.css">
-                           <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@imagens/circle_arrow_up.png" />
-                                 </image>
-                              </ImageView>
-                              <Label text="Saque" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font></Label>
-                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="99.0" text="Realizar saque" textFill="WHITE" />
-                           </children>
-                        </VBox>
-                        <VBox fx:id="acaoRapidaDeposito" alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="quick-card" stylesheets="@../../../css/tela_inicio.css">
-                           <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@imagens/circle_arrow_down.png" />
-                                 </image>
-                              </ImageView>
-                              <Label text="Depósito" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="17.0" prefWidth="99.0" text="Adicionar fundos" textFill="WHITE" />
-                           </children></VBox>
-                        <VBox fx:id="acaoRapidaTransferencia" alignment="CENTER" prefHeight="130.0" prefWidth="293.0" spacing="6.0" styleClass="quick-card" stylesheets="@../../../css/tela_inicio.css">
-                           <children>
-                              <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@imagens/arrow_left_right.png" />
-                                 </image>
-                              </ImageView>
-                              <Label text="Transferência" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font>
-                              </Label>
-                              <Label text="Enviar dinheiro" textFill="WHITE" />
-                           </children></VBox>
-                     </children>
-                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="130.0" prefWidth="920.0" spacing="20.0" />
                </children>
             </VBox>
          </content>
