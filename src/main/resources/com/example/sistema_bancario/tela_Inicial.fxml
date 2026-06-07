@@ -83,7 +83,7 @@
                   <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                </padding>
                <children>
-                  <Label styleClass="title" stylesheets="@../../../css/tela_inicio.css" text="Olá, Maria!" textFill="WHITE">
+                  <Label fx:id="labelMostrarNome" styleClass="title" stylesheets="@../../../css/tela_inicio.css" text="Olá, Maria!" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>

@@ -58,7 +58,7 @@ public class TransferenciaController {
             txtDigitarValorDeposito.clear();
             txtDigitarCPF.clear();
 
-            GerenciadorTelas.trocarTela(event, "/com/exemple/sistema_bancario/tela_Inicial.fxml");
+            GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
 
         }catch (valorInvalidoException ex){
             alertaDeErro(ex.getMessage());

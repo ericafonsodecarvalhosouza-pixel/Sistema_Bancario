@@ -89,7 +89,7 @@ public class CadastroController {
         String senha = textFieldSenha.getText().trim();
 
         if (nome.isEmpty()) {
-            mostrarErro("Digite seu nome.");
+            mostrarErro("Digite seu nome:");
             return;
         }
 

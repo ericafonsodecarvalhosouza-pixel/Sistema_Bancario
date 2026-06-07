@@ -41,8 +41,8 @@
             </Label>
 
             <Button fx:id="btnCadastrar" layoutX="321.0" layoutY="531.0" mnemonicParsing="false" onAction="#botaoCadastrar" prefHeight="41.0" prefWidth="91.0" text="Cadastrar" />
-            <PasswordField fx:id="labelSenha" layoutX="414.0" layoutY="313.0" prefHeight="34.0" prefWidth="214.0" />
-            <TextField fx:id="labelCpf" layoutX="149.0" layoutY="313.0" prefHeight="34.0" prefWidth="199.0" />
+            <PasswordField fx:id="textFieldSenha" layoutX="414.0" layoutY="313.0" prefHeight="34.0" prefWidth="214.0" />
+            <TextField fx:id="textFieldCpf" layoutX="149.0" layoutY="313.0" prefHeight="34.0" prefWidth="199.0" />
             <Label fx:id="tipoDeContaTexto" layoutX="292.0" layoutY="376.0" text="Tipo de Conta:" textFill="#f4ecec">
                <font>
                   <Font size="23.0" />

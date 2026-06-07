@@ -1,5 +1,6 @@
 package com.example.sistema_bancario.controller.ServicosController;
 
+import com.example.sistema_bancario.controller.utils.GerenciadorTelas;
 import com.example.sistema_bancario.domínios.Banco;
 import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.extrato.GerarExtratoPDF;
@@ -62,7 +63,12 @@ public class ExtratoController {
     }
 
     @FXML
-    void tela_Inicial(ActionEvent event) throws Exception{
+        private void tela_Inicial(ActionEvent event) throws IOException {
+
+            GerenciadorTelas.trocarTela(
+                    event,
+                    "/com/example/sistema_bancario/tela_Inicial.fxml"
+            );
 
     }
 
