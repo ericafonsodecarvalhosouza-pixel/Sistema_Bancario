@@ -30,7 +30,8 @@
                </graphic>
             </Label>
             <Label text="Seu futuro. nossa prioridade" textFill="WHITE" />
-            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnVoltar" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
+
+            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#voltarParaInicio2" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>

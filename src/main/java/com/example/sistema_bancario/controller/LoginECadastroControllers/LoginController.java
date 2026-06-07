@@ -5,6 +5,8 @@ import com.example.sistema_bancario.domínios.Contas.Conta;
 import com.example.sistema_bancario.domínios.Contas.ContaCorrente;
 import com.example.sistema_bancario.domínios.Contas.ContaPoupanca;
 import com.example.sistema_bancario.domínios.cliente.Cliente;
+import com.example.sistema_bancario.exceptions.saldoInsuficienteException;
+import com.example.sistema_bancario.exceptions.valorInvalidoException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -46,11 +48,12 @@ public class LoginController {
                 .orElse(null);
 
         if (Objects.nonNull(contaEncontrada)) {
-            Banco.contaLogada = contaEncontrada;
+
+            Banco.setContaLogada(contaEncontrada);
 
             GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
 
-        }else{
+        } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Login");
             alert.setContentText("Email ou senha inválida!");
@@ -60,10 +63,9 @@ public class LoginController {
         }
 
 
-
     }
 
-    public void direcionarParaCadastro(ActionEvent event) throws IOException{
+    public void direcionarParaCadastro(ActionEvent event) throws IOException {
         GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/cadastro.fxml");
 
     }

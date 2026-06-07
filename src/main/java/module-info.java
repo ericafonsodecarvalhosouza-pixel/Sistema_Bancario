@@ -8,6 +8,20 @@ module com.example.sistema_bancario {
     exports com.example.sistema_bancario;
     opens com.example.sistema_bancario to javafx.fxml;
 
+    requires java.desktop;
+    requires javafx.base;
+    requires kernel;
+    requires layout;
+
+
+    opens com.example.sistema_bancario to javafx.fxml;
+
+
+
+    exports com.example.sistema_bancario.controller;
+    opens com.example.sistema_bancario.controller to javafx.fxml;
+    exports com.example.sistema_bancario.Main;
+    opens com.example.sistema_bancario.Main to javafx.fxml;
     exports com.example.sistema_bancario.controller.ServicosController;
     opens com.example.sistema_bancario.controller.ServicosController to javafx.fxml;
 

@@ -131,6 +131,8 @@ public class CadastroController {
 
             Banco.cadastroContas.add(conta);
 
+            Banco.setContaLogada(conta);
+
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Usuário cadastrado com sucesso!");
             alert.showAndWait();

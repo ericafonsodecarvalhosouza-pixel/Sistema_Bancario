@@ -15,6 +15,7 @@ import java.io.IOException;
 
 public class DepositoController {
 
+
     @FXML
     private TextField txtDigitarValorDeposito;
 
@@ -22,11 +23,9 @@ public class DepositoController {
     private Label lblValorDisponivel;
 
 
-    private Conta conta;
-
-
-    public void setConta(Conta conta){
-        this.conta = conta;
+    @FXML
+    public void initialize(){
+        Conta conta = Banco.getContaLogada();
         atualizarSaldo();
     }
 
@@ -42,6 +41,7 @@ public class DepositoController {
     @FXML
     private void confirmarDeposito(ActionEvent event ) throws IOException {
         try {
+            Conta conta = Banco.contaLogada;
             double valor = Double.parseDouble(txtDigitarValorDeposito.getText());
             conta.depositar(valor);
             atualizarSaldo();
@@ -80,13 +80,16 @@ public class DepositoController {
     }
     private void atualizarSaldo(){
 
-        conta = Banco.contaLogada;
+        Conta conta = Banco.getContaLogada();
 
         if(conta != null){
             lblValorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
         }
     }
+
+    @FXML
+    public void voltarParaInicio2(ActionEvent event) throws IOException {
+        GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
+    }
 }
-
-
 

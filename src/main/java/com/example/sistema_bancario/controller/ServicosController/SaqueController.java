@@ -20,12 +20,11 @@ public class SaqueController {
     private TextField digitarValorSaque;
 
     @FXML
-    private Label valorDisponivel;
+    private Label lblValorDisponivel;
 
-    private Conta conta;
-
-    public void setConta(Conta conta){
-        this.conta = conta;
+    @FXML
+    private void initialize(){
+        Conta conta = Banco.getContaLogada();
         atualizarSaldo();
     }
 
@@ -41,6 +40,7 @@ public class SaqueController {
     @FXML
     private void confirmarSaque(ActionEvent event )throws IOException {
         try {
+            Conta conta = Banco.contaLogada;
             double valor = Double.parseDouble(digitarValorSaque.getText());
             conta.sacar(valor);
             atualizarSaldo();
@@ -76,11 +76,14 @@ public class SaqueController {
 
     }
     private void atualizarSaldo(){
-
-        conta = Banco.contaLogada;
-
+        Conta conta = Banco.getContaLogada();
         if(conta != null){
-            valorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
+            lblValorDisponivel.setText(String.format("R$ " + conta.getSaldo()));
         }
+    }
+
+    @FXML
+    public void voltarParaInicio1(ActionEvent event) throws IOException{
+        GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
     }
 }

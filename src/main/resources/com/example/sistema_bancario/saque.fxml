@@ -30,7 +30,11 @@
                </graphic>
             </Label>
             <Label text="Seu futuro. nossa prioridade" textFill="WHITE" />
+<<<<<<< HEAD
             <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#btnVoltar" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
+=======
+            <Button fx:id="btnInicio" graphicTextGap="10.0" mnemonicParsing="false" onAction="#voltarParaInicio1" prefHeight="44.0" prefWidth="208.0" styleClass="menu-button-active" stylesheets="@../../../css/tela_inicio.css" text="Voltar ao início">
+>>>>>>> master
                <graphic>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -63,7 +67,7 @@
                         <VBox layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>
                               <Label fx:id="valorDisponivelTexto" layoutX="32.0" layoutY="25.0" styleClass="withdraw-balance-label" stylesheets="@../../../css/saque.css" text="Saldo disponível" textFill="WHITE" />
-                              <Label fx:id="valorDisponivel" layoutX="32.0" layoutY="55.0" prefHeight="50.0" prefWidth="187.0" styleClass="withdraw-balance-value" stylesheets="@../../../css/saque.css" text="R$ 5.430,75" textFill="WHITE">
+                              <Label fx:id="lblValorDisponivel" layoutX="32.0" layoutY="55.0" prefHeight="50.0" prefWidth="187.0" styleClass="withdraw-balance-value" stylesheets="@../../../css/saque.css" text="R$ 5.430,75" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
@@ -109,7 +113,11 @@
                               <Insets left="16.0" right="16.0" />
                            </padding>
                         </HBox>
+<<<<<<< HEAD
                         <Button fx:id="btnConfirmarSaque" mnemonicParsing="false" onAction="#confirmarSaque" prefHeight="50.0" prefWidth="905.0" styleClass="withdraw-button" stylesheets="@../../../css/saque.css" text="Sacar" />
+=======
+                        <Button fx:id="btnConfirmarSaque" mnemonicParsing="false" onAction="#confiarmarSaque" prefHeight="50.0" prefWidth="905.0" styleClass="withdraw-button" stylesheets="@../../../css/saque.css" text="Sacar" />
+>>>>>>> master
                      </children>
                   </VBox>
                </children>

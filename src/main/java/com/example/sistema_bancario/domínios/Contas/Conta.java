@@ -96,6 +96,11 @@ public class Conta {
 
     }
 
+    public List<Movimentacao> getMovimentacoes() {
+        return movimentacoes;
+    }
 
-
+    public void setMovimentacoes(List<Movimentacao> movimentacoes) {
+        this.movimentacoes = movimentacoes;
+    }
 }
