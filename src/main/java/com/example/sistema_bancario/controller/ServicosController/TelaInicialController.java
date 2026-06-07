@@ -40,16 +40,16 @@ public class TelaInicialController {
     private Label labelMostrarNome;
 
     @FXML
-    private void Initialize(){
+    private void initialize(){
         Conta conta = Banco.getContaLogada();
-
         atualizarSaldo();
+        MostrarNome();
     }
 
     @FXML
     private void MostrarNome(){
         Conta conta = Banco.getContaLogada();
-        labelMostrarNome.setText("Olá, " + conta.getCliente().getNome());
+        labelMostrarNome.setText(String.format("Olá, " + conta.getCliente().getNome()));
     }
 
     @FXML

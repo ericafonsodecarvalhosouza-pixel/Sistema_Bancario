@@ -71,14 +71,6 @@
                               <HBox prefHeight="100.0" prefWidth="200.0" spacing="12.0" />
                            </children>
                         </VBox>
-                        <VBox layoutX="820.0" layoutY="30.0" prefHeight="55.0" prefWidth="105.0" spacing="1.0" styleClass="withdraw-account-box" stylesheets="@../../../css/saque.css">
-                           <children>
-                              <Label text="Conta Corrente" textFill="WHITE" />
-                           </children>
-                           <padding>
-                              <Insets bottom="8.0" left="10.0" right="10.0" top="8.0" />
-                           </padding>
-                        </VBox>
                      </children>
                   </AnchorPane>
                   <VBox prefHeight="250.0" prefWidth="965.0" spacing="16.0" styleClass="withdraw-form" stylesheets="@../../../css/saque.css">
