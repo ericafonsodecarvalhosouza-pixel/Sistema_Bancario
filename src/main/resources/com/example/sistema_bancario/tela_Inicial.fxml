@@ -89,7 +89,7 @@
                      </font>
                   </Label>
                   <Label styleClass="subtitle" stylesheets="@../../../css/tela_inicio.css" text="Bem-vinda ao seu painel bancário" textFill="WHITE" />
-                  <AnchorPane fx:id="cardDisponivelInicial" prefHeight="175.0" prefWidth="965.0" styleClass="balance-card" stylesheets="@../../../css/tela_inicio.css">
+                  <AnchorPane fx:id="cardDisponivelInicial" prefHeight="115.0" prefWidth="620.0" styleClass="balance-card" stylesheets="@../../../css/tela_inicio.css">
                      <children>
                         <VBox layoutX="28.0" layoutY="22.0" prefHeight="100.0" prefWidth="360.0" spacing="7.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
                            <children>
