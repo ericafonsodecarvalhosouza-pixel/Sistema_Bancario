@@ -19,6 +19,9 @@ public class Cliente {
 
         this.email = email;
 
+        if (CPF.length() < 11){
+            throw new loginInvalidoexception("CPF com menos de 11 caracteres.");
+        }
         this.CPF = CPF;
 
         if (senha.length() < 8){
@@ -51,6 +54,9 @@ public class Cliente {
     }
 
     public void setCPF(String CPF) {
+        if (CPF.length() < 11){
+            throw new loginInvalidoexception("CPF com menos de 11 caracteres.");
+        }
         this.CPF = CPF;
     }
 
