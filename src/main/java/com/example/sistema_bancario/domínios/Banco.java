@@ -1,8 +1,8 @@
 package com.example.sistema_bancario.domínios;
 
-import com.example.sistema_bancario.domínios.Contas.Conta;
-import com.example.sistema_bancario.domínios.Contas.ContaCorrente;
-import com.example.sistema_bancario.domínios.Contas.ContaPoupanca;
+import com.example.sistema_bancario.domínios.contas.Conta;
+import com.example.sistema_bancario.domínios.contas.ContaCorrente;
+import com.example.sistema_bancario.domínios.contas.ContaPoupanca;
 import com.example.sistema_bancario.domínios.cliente.Cliente;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class Banco {
         Cliente cliente1 = new Cliente(
                 "João Silva",
                 "joao.silva@gmail.com",
-                "11111111111",
+                "12345678900",
                 "senha123"
         );
 
@@ -31,7 +31,7 @@ public class Banco {
         Cliente cliente2 = new Cliente(
                 "Maria Souza",
                 "maria.souza@hotmail.com",
-                "22222222222",
+                "98765432101",
                 "senha123"
         );
 
@@ -65,5 +65,32 @@ public class Banco {
 
     public static void logout(){
         contaLogada = null;
+    }
+
+    public static boolean emailExiste(String email){
+        for (Conta conta: cadastroContas){
+            if(conta.getCliente().getEmail().equalsIgnoreCase(email)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean cpfExiste(String cpf){
+        for (Conta conta: cadastroContas){
+            if(conta.getCliente().getCPF().equalsIgnoreCase(cpf)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean senhaExiste(String senha){
+        for (Conta conta: cadastroContas){
+            if(conta.getCliente().getSenha().equalsIgnoreCase(senha)){
+                return true;
+            }
+        }
+        return false;
     }
 }

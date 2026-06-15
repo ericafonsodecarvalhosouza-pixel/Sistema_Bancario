@@ -1,12 +1,10 @@
-package com.example.sistema_bancario.controller.ServicosController;
+package com.example.sistema_bancario.controller.servicosController;
 
 import com.example.sistema_bancario.controller.utils.GerenciadorTelas;
-import com.example.sistema_bancario.domínios.Contas.Conta;
+import com.example.sistema_bancario.domínios.contas.Conta;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import com.example.sistema_bancario.domínios.Banco;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
@@ -14,24 +12,6 @@ import javafx.scene.control.Label;
 import java.io.IOException;
 
 public class TelaInicialController {
-
-    @FXML
-    private Button btnDeposito;
-
-    @FXML
-    private Button btninicio0;
-
-    @FXML
-    private Button btnExtrato;
-
-    @FXML
-    private Button btnInicio;
-
-    @FXML
-    private Button btnSaque;
-
-    @FXML
-    private Button btnTransferencia;
 
     @FXML
     private Label lblValorDisponivel;

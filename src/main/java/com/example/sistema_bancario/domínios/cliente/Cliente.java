@@ -1,8 +1,12 @@
 package com.example.sistema_bancario.domínios.cliente;
 
-import com.example.sistema_bancario.exceptions.loginInvalidoexception;
+import com.example.sistema_bancario.domínios.Banco;
+import com.example.sistema_bancario.domínios.contas.Conta;
+import com.example.sistema_bancario.exceptions.LoginInvalidoexception;
 
 import java.util.Objects;
+
+import static com.example.sistema_bancario.domínios.Banco.cadastroContas;
 
 public class Cliente {
     private String nome;
@@ -14,18 +18,18 @@ public class Cliente {
         this.nome = nome;
 
         if (!validarEmail(email)){
-            throw new loginInvalidoexception("Email Inválido.");
+            throw new LoginInvalidoexception("Email Inválido.");
         }
 
         this.email = email;
 
-        if (CPF.length() < 11){
-            throw new loginInvalidoexception("CPF com menos de 11 caracteres.");
+        if (CPF.length() != 11){
+            throw new LoginInvalidoexception("CPF com menos ou mais de 11 caracteres.");
         }
         this.CPF = CPF;
 
         if (senha.length() < 8){
-            throw new loginInvalidoexception("Senha com menos de 8 caracteres");
+            throw new LoginInvalidoexception("Senha com menos de 8 caracteres");
         }
         this.senha = senha;
     }
@@ -44,7 +48,7 @@ public class Cliente {
 
     public void setEmail(String email) {
         if (!validarEmail(email)){
-            throw new loginInvalidoexception("Email inválido.");
+            throw new LoginInvalidoexception("Email inválido.");
         }
         this.email = email;
     }
@@ -55,19 +59,19 @@ public class Cliente {
 
     public void setCPF(String CPF) {
         if (CPF.length() < 11){
-            throw new loginInvalidoexception("CPF com menos de 11 caracteres.");
+            throw new LoginInvalidoexception("CPF com menos de 11 caracteres.");
         }
         this.CPF = CPF;
     }
 
     public String getSenha() {
         if (senha.length() < 8){
-            throw new loginInvalidoexception("Senha com menos de 8 caracteres.");
+            throw new LoginInvalidoexception("Senha com menos de 8 caracteres.");
         }
         return senha;
     }
 
-    public void setSenha(String senha) {
+    public void setSenha(String senha, Banco conta) {
         this.senha = senha;
     }
 

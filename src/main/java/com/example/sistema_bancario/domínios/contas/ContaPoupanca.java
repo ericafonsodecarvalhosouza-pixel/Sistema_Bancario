@@ -1,4 +1,4 @@
-package com.example.sistema_bancario.domínios.Contas;
+package com.example.sistema_bancario.domínios.contas;
 
 import com.example.sistema_bancario.domínios.cliente.Cliente;
 

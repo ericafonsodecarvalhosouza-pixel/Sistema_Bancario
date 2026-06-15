@@ -1,37 +1,18 @@
-package com.example.sistema_bancario.controller.LoginECadastroControllers;
+package com.example.sistema_bancario.controller.login.e.cadastro.controllers;
 import com.example.sistema_bancario.controller.utils.GerenciadorTelas;
 import com.example.sistema_bancario.domínios.Banco;
-import com.example.sistema_bancario.domínios.Contas.Conta;
-import com.example.sistema_bancario.domínios.Contas.ContaCorrente;
-import com.example.sistema_bancario.domínios.Contas.ContaPoupanca;
-import com.example.sistema_bancario.domínios.cliente.Cliente;
-import com.example.sistema_bancario.exceptions.saldoInsuficienteException;
-import com.example.sistema_bancario.exceptions.valorInvalidoException;
+import com.example.sistema_bancario.domínios.contas.Conta;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class LoginController {
 
-
-    @FXML
-    private Button btnEntrar;
-
     @FXML
     private TextField emailField;
-
-    @FXML
-    private Hyperlink linkCadrastro;
 
     @FXML
     private PasswordField passwordField;

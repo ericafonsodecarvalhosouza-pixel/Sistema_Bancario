@@ -1,51 +1,23 @@
-package com.example.sistema_bancario.controller.LoginECadastroControllers;
+package com.example.sistema_bancario.controller.login.e.cadastro.controllers;
 
 import com.example.sistema_bancario.controller.utils.GerenciadorTelas;
 import com.example.sistema_bancario.domínios.Banco;
-import com.example.sistema_bancario.domínios.Contas.Conta;
-import com.example.sistema_bancario.domínios.Contas.ContaCorrente;
-import com.example.sistema_bancario.domínios.Contas.ContaPoupanca;
+import com.example.sistema_bancario.domínios.contas.Conta;
+import com.example.sistema_bancario.domínios.contas.ContaCorrente;
+import com.example.sistema_bancario.domínios.contas.ContaPoupanca;
 import com.example.sistema_bancario.domínios.cliente.Cliente;
-import com.example.sistema_bancario.exceptions.loginInvalidoexception;
+import com.example.sistema_bancario.exceptions.LoginInvalidoexception;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
 public class CadastroController {
 
     @FXML
-    private Button btnCadastrar;
-
-    @FXML
-    private Label emailText;
-
-    @FXML
-    private Label extratoHover;
-
-    @FXML
-    private Label extratoSidebar;
-
-    @FXML
-    private AnchorPane fundoCadastro;
-
-    @FXML
-    private Label nomeBanco;
-
-    @FXML
-    private Label nomeText;
-
-    @FXML
-    private AnchorPane sidebar;
-
-    @FXML
     private Label textCadastro;
-
-    @FXML
-    private Label textCpf;
 
     @FXML
     private TextField textFieldCpf;
@@ -58,12 +30,6 @@ public class CadastroController {
 
     @FXML
     private PasswordField textFieldSenha;
-
-    @FXML
-    private Label textSenha;
-
-    @FXML
-    private Label textTipoDeConta;
 
     @FXML
     private ComboBox<String> tipoDeConta;
@@ -117,6 +83,21 @@ public class CadastroController {
             return;
         }
 
+        if (Banco.emailExiste(email)){
+            mostrarErro("Email ja cadastrado. Use um novo email!");
+            return;
+        }
+
+        if (Banco.cpfExiste(cpf)){
+            mostrarErro("CPF já cadastrado. Use um novo CPF!");
+            return;
+        }
+
+        if (Banco.senhaExiste(senha)){
+            mostrarErro("Senha já cadastrada. Use uma nova senha!");
+            return;
+        }
+
         try {
 
             Cliente cliente = new Cliente(nome, email, cpf, senha);
@@ -144,7 +125,7 @@ public class CadastroController {
                     "/com/example/sistema_bancario/tela_Inicial.fxml"
             );
 
-        } catch (loginInvalidoexception e) {
+        } catch (LoginInvalidoexception e) {
             mostrarErro(e.getMessage());
         }
     }

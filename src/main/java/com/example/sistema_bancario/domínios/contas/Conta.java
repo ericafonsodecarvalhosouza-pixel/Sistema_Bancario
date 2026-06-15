@@ -1,13 +1,13 @@
-package com.example.sistema_bancario.domínios.Contas;
+package com.example.sistema_bancario.domínios.contas;
 
 import com.example.sistema_bancario.domínios.Banco;
 import com.example.sistema_bancario.domínios.movimentacao.Movimentacao;
 import com.example.sistema_bancario.domínios.cliente.Cliente;
 import com.example.sistema_bancario.enums.TipoMovimentacao;
-import com.example.sistema_bancario.exceptions.clienteInvalidoException;
-import com.example.sistema_bancario.exceptions.destinoInvalidoException;
-import com.example.sistema_bancario.exceptions.saldoInsuficienteException;
-import com.example.sistema_bancario.exceptions.valorInvalidoException;
+import com.example.sistema_bancario.exceptions.ClienteInvalidoException;
+import com.example.sistema_bancario.exceptions.DestinoInvalidoException;
+import com.example.sistema_bancario.exceptions.SaldoInsuficienteException;
+import com.example.sistema_bancario.exceptions.ValorInvalidoException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ public class Conta {
 
     public Conta(Cliente cliente) {
         if (Objects.isNull(cliente)){
-            throw new clienteInvalidoException("Cadastro de cliente está sem informações.");
+            throw new ClienteInvalidoException("Cadastro de cliente está sem informações.");
         }
         this.cliente = cliente;
         this.saldo = 0;
@@ -46,7 +46,7 @@ public class Conta {
     public void depositar(double valor){
 
         if(valor <= 0){
-            throw new valorInvalidoException("O valor do depósito deve ser maior que zero!");
+            throw new ValorInvalidoException("O valor do depósito deve ser maior que zero!");
         }
         saldo += valor;
 
@@ -55,12 +55,12 @@ public class Conta {
 
     public void sacar(double valor){
         if (valor <= 0) {
-            throw new valorInvalidoException(
+            throw new ValorInvalidoException(
                     "O valor do saque deve ser maior que zero.");
         }
 
         if(valor > saldo){
-            throw new saldoInsuficienteException("valor maior que o saldo da conta");
+            throw new SaldoInsuficienteException("valor maior que o saldo da conta");
         }
 
         saldo -= valor;
@@ -75,21 +75,21 @@ public class Conta {
     public void transferir(String cpfDestino, double valor){
 
         if (valor <= 0){
-            throw new saldoInsuficienteException("Valor inválido.");
+            throw new SaldoInsuficienteException("Valor inválido.");
         }
 
         if (this.saldo < valor){
-            throw new saldoInsuficienteException("Saldo insuficiente para transferência.");
+            throw new SaldoInsuficienteException("Saldo insuficiente para transferência.");
         }
 
         Conta destino = Banco.buscarCPF(cpfDestino);
 
         if (Objects.isNull(destino)){
-            throw new destinoInvalidoException("Não existe o destino solicitado.");
+            throw new DestinoInvalidoException("Não existe o destino solicitado.");
         }
 
-        this.sacar(valor);
-        destino.depositar(valor);
+        this.saldo -= valor;
+        destino.setSaldo(destino.getSaldo() + valor);
 
         criarAMovimentacao(TipoMovimentacao.TRANSFERENCIA_ENVIADA, valor, "Transferência realizada.");
         destino.criarAMovimentacao(TipoMovimentacao.TRANSFERENCIA_RECEBIDA, valor, "Transferência recebida.");
