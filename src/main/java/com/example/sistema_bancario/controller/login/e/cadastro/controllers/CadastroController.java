@@ -95,6 +95,7 @@ public class CadastroController {
 
         if (Banco.senhaExiste(senha)){
             mostrarErro("Senha já cadastrada. Use uma nova senha!");
+            return;
         }
 
         try {
