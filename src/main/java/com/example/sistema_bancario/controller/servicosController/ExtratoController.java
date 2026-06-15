@@ -1,8 +1,8 @@
-package com.example.sistema_bancario.controller.ServicosController;
+package com.example.sistema_bancario.controller.servicosController;
 
 import com.example.sistema_bancario.controller.utils.GerenciadorTelas;
 import com.example.sistema_bancario.domínios.Banco;
-import com.example.sistema_bancario.domínios.Contas.Conta;
+import com.example.sistema_bancario.domínios.contas.Conta;
 import com.example.sistema_bancario.extrato.GerarExtratoPDF;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,19 +15,7 @@ import java.io.IOException;
 public class ExtratoController {
 
     @FXML
-    private Button btnExtrato;
-
-    @FXML
-    private Button btnInicio;
-
-    @FXML
     private Label lblValorDisponivel;
-
-    @FXML
-    private Label saldoatualTexto;
-
-    @FXML
-    private Label tituloExtrato;
 
     @FXML
     public void initialize(){

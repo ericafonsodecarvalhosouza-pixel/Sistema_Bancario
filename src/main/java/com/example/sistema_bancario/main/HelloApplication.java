@@ -1,4 +1,4 @@
-package com.example.sistema_bancario.Main;
+package com.example.sistema_bancario.main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

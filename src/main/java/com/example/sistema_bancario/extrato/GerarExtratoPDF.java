@@ -1,7 +1,7 @@
 package com.example.sistema_bancario.extrato;
 
 
-import com.example.sistema_bancario.domínios.Contas.Conta;
+import com.example.sistema_bancario.domínios.contas.Conta;
 import com.example.sistema_bancario.domínios.movimentacao.Movimentacao;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;

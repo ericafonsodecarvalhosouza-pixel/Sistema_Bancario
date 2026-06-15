@@ -11,12 +11,12 @@ module com.example.sistema_bancario {
     requires kernel;
     requires layout;
 
-    exports com.example.sistema_bancario.Main;
-    opens com.example.sistema_bancario.Main to javafx.fxml;
-    exports com.example.sistema_bancario.controller.ServicosController;
-    opens com.example.sistema_bancario.controller.ServicosController to javafx.fxml;
+    exports com.example.sistema_bancario.main;
+    opens com.example.sistema_bancario.main to javafx.fxml;
+    exports com.example.sistema_bancario.controller.servicosController;
+    opens com.example.sistema_bancario.controller.servicosController to javafx.fxml;
 
-    exports com.example.sistema_bancario.controller.LoginECadastroControllers;
-    opens com.example.sistema_bancario.controller.LoginECadastroControllers to javafx.fxml;
+    exports com.example.sistema_bancario.controller.login.e.cadastro.controllers;
+    opens com.example.sistema_bancario.controller.login.e.cadastro.controllers to javafx.fxml;
 
 }

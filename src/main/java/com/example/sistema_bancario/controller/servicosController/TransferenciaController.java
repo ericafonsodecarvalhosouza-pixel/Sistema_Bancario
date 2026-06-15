@@ -1,14 +1,12 @@
-package com.example.sistema_bancario.controller.ServicosController;
+package com.example.sistema_bancario.controller.servicosController;
 
 import com.example.sistema_bancario.controller.utils.GerenciadorTelas;
 import com.example.sistema_bancario.domínios.Banco;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import com.example.sistema_bancario.domínios.Contas.Conta;
-import com.example.sistema_bancario.exceptions.saldoInsuficienteException;
-import com.example.sistema_bancario.exceptions.valorInvalidoException;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+import com.example.sistema_bancario.domínios.contas.Conta;
+import com.example.sistema_bancario.exceptions.SaldoInsuficienteException;
+import com.example.sistema_bancario.exceptions.ValorInvalidoException;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -17,13 +15,6 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 
 public class TransferenciaController {
-
-
-    @FXML
-    private Button btnEnviarPix;
-
-    @FXML
-    private Button btnInicio;
 
     @FXML
     private Label lblValorDisponivel;
@@ -60,10 +51,10 @@ public class TransferenciaController {
 
             GerenciadorTelas.trocarTela(event, "/com/example/sistema_bancario/tela_Inicial.fxml");
 
-        }catch (valorInvalidoException ex){
+        }catch (ValorInvalidoException ex){
             alertaDeErro(ex.getMessage());
 
-        }catch (saldoInsuficienteException ex){
+        }catch (SaldoInsuficienteException ex){
             alertaDeErro(ex.getMessage());
 
         }catch (NumberFormatException ex){
